@@ -1,5 +1,5 @@
 # vb.net
-c# program to print a binary triangle<br>
+**c# program to print a binary triangle<br>**
 using System;
 
 namespace ex1<br>
@@ -33,7 +33,7 @@ namespace ex1<br>
 ![image](https://user-images.githubusercontent.com/97970956/154621989-89ff8d1e-9761-4c52-bd61-e3805011b181.png)
 
 
-2.c# program to chech whether the entered number is amicable or not
+**2.c# program to chech whether the entered number is amicable or not**
 using System;
 
 namespace ex2<br>
@@ -75,7 +75,7 @@ namespace ex2<br>
 }<br>
 ![image](https://user-images.githubusercontent.com/97970956/154622803-b55bb416-9476-4980-abd9-a66457a69091.png)
 
-3.. C# Program to Illustrate Multilevel Inheritance with Virtual Methods  (displaying student details). 
+3.. **C# Program to Illustrate Multilevel Inheritance with Virtual Methods  (displaying student details). **
 using System;<br>
 
 namespace studentusing System;
@@ -294,7 +294,7 @@ namespace student<br>
   
   
 
-4.C# Program to Create a Gray Code
+**4.C# Program to Create a Gray Code**
 
 using System;<br>
 
@@ -323,8 +323,8 @@ namespace ex3<br>
 ![image](https://user-images.githubusercontent.com/97970956/154626602-e254a9f8-1849-46c5-8052-fd73d85d46e5.png)
 
 
-5. C# program to calculate volume of 2 boxes and find the resultant volume  after addition of 2 boxes by implementing operator overloading. 
-
+**5. C# program to calculate volume of 2 boxes and find the resultant volume  after addition of 2 boxes by implementing operator overloading. 
+**
 using System;<br>
 
 namespace ex5<br><br>
@@ -371,7 +371,7 @@ namespace ex5<br><br>
 
 using System;
 
-6.. C# Program to Implement Principles of Delegates (converting input string to  uppercase first, last and entire string). 
+**6.. C# Program to Implement Principles of Delegates (converting input string to  uppercase first, last and entire string). **
 
 namespace upppercase<br>
 
@@ -414,7 +414,7 @@ namespace upppercase<br>
 ![image](https://user-images.githubusercontent.com/97970956/154628942-8b16e0de-0521-43f4-9cc4-ea30e324bf9f.png)
 
 
-7. C# Program to Generate Register Number automatically for 100 Students  using Static Constructor.
+**7. C# Program to Generate Register Number automatically for 100 Students  using Static Constructor.**
 using System;
 
 namespace Register<br>
@@ -451,7 +451,7 @@ namespace Register<br>
 
 
 
-8.C# Program to Find the Frequency of the Word ʺisʺ in a given Sentence. 
+**8.C# Program to Find the Frequency of the Word ʺisʺ in a given Sentence. **
 
 using System;
 
@@ -486,7 +486,7 @@ namespace freequency<br>
 ![image](https://user-images.githubusercontent.com/97970956/154631143-13e10557-c570-4c14-ac47-77fd99cc20d1.png)
 
 
-9.C# program that benchmarks 2D, jagged array allocation. 
+**9.C# program that benchmarks 2D, jagged array allocation. **
 using System;
 using System.Diagnostics;<br>
 
@@ -543,55 +543,259 @@ namespace benchmarks<br>
 }<br>
 ![image](https://user-images.githubusercontent.com/97970956/154632699-40ee54cf-6183-4f4e-ba8c-e1bd07e5270b.png)
 
-10.C# Program to Find the Sum of the Values on Diagonal of the Matrix. using System; 
+**10.C# Program to Find the Sum of the Values on Diagonal of the Matrix. using System; **
 using System;
 
 namespace ex10
 {
-    class SumOfDiagonals
+    class SumOfDiagonals<br>
     {
-        static void Main(string[] args)
-        {
-            int MaxRow, MaxCol, Sum = 0;
-            int[,] Matrix;
-            Console.WriteLine("\n---------- SUM OF DIAGONAL OF A MATRIX ----------\n"); Console.Write("\nEnter the number of rows: ");
-            MaxRow = Convert.ToInt32(Console.ReadLine());
-            Console.Write("\nEnter the number of columns: ");
-            MaxCol = Convert.ToInt32(Console.ReadLine());
-            if (MaxRow != MaxCol)
-            {
-                Console.WriteLine("\nThe Dimensions entered are not of Square Matrix."); Console.WriteLine("\nExiting the Program..");
-                return;
+        static void Main(string[] args)<br>
+        {<br>
+            int MaxRow, MaxCol, Sum = 0;<br>
+            int[,] Matrix;<br><br>
+            Console.WriteLine("\n---------- SUM OF DIAGONAL OF A MATRIX ----------\n"); Console.Write("\nEnter the number of rows: ");<br>
+            MaxRow = Convert.ToInt32(Console.ReadLine());<br>
+            Console.Write("\nEnter the number of columns: ");<br>
+            MaxCol = Convert.ToInt32(Console.ReadLine());<br>
+            if (MaxRow != MaxCol)<br>
+            {<br>
+                Console.WriteLine("\nThe Dimensions entered are not of Square Matrix."); Console.WriteLine("\nExiting the Program..");<br>
+                return;<br><br>
             }
-            Matrix = new int[MaxRow, MaxCol];
-            for (int i = 0; i < MaxRow; i++)
+            Matrix = new int[MaxRow, MaxCol];<br><br>
+            for (int i = 0; i < MaxRow; i++)<br>
             {
-                for (int j = 0; j < MaxCol; j++)
+                for (int j = 0; j < MaxCol; j++)<br>
                 {
-                    Console.Write("\nEnter the ({0},{1})th element of the matrix: ", (i + 1), (j + 1)); Matrix[i, j] = Convert.ToInt32(Console.ReadLine());
-                }
-            }
-            Console.WriteLine("\nThe entered Matrix is: ");
-            for (int i = 0; i < MaxRow; i++)
+                    Console.Write("\nEnter the ({0},{1})th element of the matrix: ", (i + 1), (j + 1)); Matrix[i, j] = Convert.ToInt32(Console.ReadLine());<br>
+                }<br>
+            }<br>
+            Console.WriteLine("\nThe entered Matrix is: ");<br>
+            for (int i = 0; i < MaxRow; i++)<br>
             {
-                for (int j = 0; j < MaxCol; j++)
-                {
-                    Console.Write(" " + Matrix[i, j]);
-                    if (i == j)
-                    {
-                    Sum += Matrix[i, j];
-                    }
-                }
-                Console.WriteLine();
+                for (int j = 0; j < MaxCol; j++)<br>
+                {<br>
+                    Console.Write(" " + Matrix[i, j]);<br>
+                    if (i == j)<br>
+                    {<br>
+                    Sum += Matrix[i, j];<br>
+                    }<br>
+                }<br>
+                Console.WriteLine();<br>
             }
             Console.WriteLine("\nThe Sum of Diagonal is " + Sum);
-        }
-    }
-}
+        }<br>
+    }<br>
+}<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/154633626-af924c82-b262-4da9-877b-cca2aafb7735.png)
 
 
+**11.C# Program to Create a File, Check the Existence of a File and Read the  Contents of the File.**
+using System;
+using System.IO;<br>
+
+
+namespace create<br>
+{<br>
+    class FileRead<br>
+    {<br>
+        public static void Main()<br>
+        {<br>
+            string filename;<br>
+            while (true)<br>
+            {<br>
+                Console.WriteLine("\n ----------------MENU------------------");<br>
+                Console.WriteLine("\n 1.create a file");<br>
+                Console.WriteLine("\n 2.existenece of the file");<br>
+                Console.WriteLine("\n 3.Read the contents of the file ");<br>
+                Console.WriteLine("\n 4.Exit");<br>
+                Console.Write("\n enter your choice :");<br>
+                int ch = int.Parse(Console.ReadLine());<br>
+                switch (ch)<br>
+                {<br>
+                    case 1:<br>
+                        Console.Write("\n Enter the name to create");<br>
+                        filename = Console.ReadLine();<br>
+                        Console.WriteLine("Write the contents to the file:\n");<br>
+                        string r = Console.ReadLine();<br>
+                        using (StreamWriter fileStr = File.CreateText(filename))<br>
+                        {
+                            fileStr.WriteLine(r);<br>
+                        }
+                        Console.WriteLine("File is created.....");<br>
+                        break;<br>
+                    case 2:<br>
+                        Console.Write("\n Enter the name to create");<br>
+                        filename = Console.ReadLine();<br>
+                        if (File.Exists(filename))<br>
+                        {
+                           <br> Console.WriteLine("file exists");<br>
+                        }<br>
+                        else
+                        {
+                            Console.WriteLine("file does not exists in the current directory ");<br>
+                        }
+                        break;<br>
+                    case 3:<br>
+                        Console.Write("\n Enter the file  name to read the contents:\n");<br>
+                        filename = Console.ReadLine();<br>
+                        if (File.Exists(filename))<br>
+                        {<br>
+                            using (StreamReader sr = File.OpenText(filename))<br>
+                            {<br>
+                                string s = " ";<br>
+                                Console.WriteLine("here is thye content of the file:");<br>
+                                while ((s = sr.ReadLine()) != null)<br>
+                                {<br>
+                                    Console.WriteLine(s);<br>
+
+
+                                }<br>
+                                Console.WriteLine(" ");<br>
+                            }
+                        }
+                        else<br>
+                        {
+                            Console.WriteLine("File does not exists");<br>
+                        }
+                        break;<br>
+                    case 4:<br>
+                        Console.WriteLine(" \n exiting");<br>
+                        return;<br>
+                    default:<br>
+                        Console.WriteLine("\n Invalid choice");<br>
+                        break;<br>
+                }<br>
+            }
+        }
+    }  
+ }
+![image](https://user-images.githubusercontent.com/97970956/154636277-f73dfc6a-eef1-4c6f-aeed-29b1f9479a35.png)
+
+   ![image](https://user-images.githubusercontent.com/97970956/154636121-1a69130c-22cc-43e0-82ff-2c7796243feb.png)
+
+![image](https://user-images.githubusercontent.com/97970956/154636191-7d1e85da-545d-4e15-8ec1-6ff37b7e567b.png)
+
+
+**12.C# Program to Perform File Comparison
+using System;
+using System.IO;
+
+
+namespace comparision
+{
+    class FileRead
+    {
+        public static void Main()
+        {
+            string file1;
+            string file2;
+            Console.Write("enter the first fiole path");
+            file1 = Console.ReadLine();
+            Console.Write("enther the second file path");
+            file2 = Console.ReadLine();
+            if(!File.Exists(file1))
+            {
+                Console.WriteLine("First file does not exist");
+
+            }
+           else  if (!File.Exists(file2))
+            {
+                Console.WriteLine("second file does not exist");
+
+            }
+              else if (File.ReadAllText(file1)==File.ReadAllText(file2))
+            {
+                Console.WriteLine("Both files contains the same content");
+
+            }
+            else 
+            {
+                Console.WriteLine("contents of files are not same");
+
+            }
+        }
+    }
+}
+
+        
+![image](https://user-images.githubusercontent.com/97970956/154637057-788bdf1d-cfc8-4459-b8b8-3d62147728c1.png)
+
+![image](https://user-images.githubusercontent.com/97970956/154637102-bf19bcb1-9925-408f-90d6-31159262c3c8.png)
+
+![image](https://user-images.githubusercontent.com/97970956/154637167-0e165ecd-94cd-4912-b442-da41610bc49f.png)
+![image](https://user-images.githubusercontent.com/97970956/154637496-766975d2-2ba8-4197-a47d-e95e3be54b70.png)
+![image](https://user-images.githubusercontent.com/97970956/154637547-5d1deafb-ed4c-48ff-b158-9543d0f275c5.png)
+
+
+**13.. C# Program to Implement IComparable Interface
+
+using System;
+namespace ex13
+{
+    class Fraction : IComparable
+    {
+        int z,n;
+        public Fraction(int z, int n)
+        {
+            this.z = z;
+            this.n = n;
+        }
+        public static Fraction operator +(Fraction a, Fraction b)
+        {
+            return new Fraction(a.z * b.n + a.n * b.z, a.n * b.n);
+        }
+        public static Fraction operator *(Fraction a, Fraction b)
+        {
+            return new Fraction(a.z * b.z, a.n * b.n);
+        }
+        public int CompareTo(object obj)
+        {
+            Fraction f = (Fraction)obj;
+            if ((float) z / n < (float)f.z / f.n)
+                    return -1;
+            else if ((float)z / n > (float)f.z / f.n)
+                return 1;
+            else
+                return 0;
+        }
+
+        public override string ToString()
+        {
+            return z + "/" + n;
+        }
+    }
+
+
+    class ICompInterface
+    {
+        public static void Main()
+        {
+            Fraction[] a =
+            {
+                new Fraction(5,2),
+                new Fraction(29,6),
+                new Fraction(4,5),
+                new Fraction(10,8),
+                new Fraction(34,7),
+
+            };
+            Array.Sort(a);
+            Console.WriteLine("Implementing the IComparabable interface in " + "Displaying Fraction:");
+            foreach (Fraction f in a)
+            {
+                Console.WriteLine(f + "");
+            }
+            Console.WriteLine();
+            Console.ReadLine();
+        }
+        
+    }
+}
+
+![image](https://user-images.githubusercontent.com/97970956/154637892-c2511ee7-20b1-455d-ba6d-4ed7a2b10cf4.png)
 
 
 
