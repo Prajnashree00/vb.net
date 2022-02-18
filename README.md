@@ -76,3 +76,524 @@ namespace ex2<br>
 ![image](https://user-images.githubusercontent.com/97970956/154622803-b55bb416-9476-4980-abd9-a66457a69091.png)
 
 3.. C# Program to Illustrate Multilevel Inheritance with Virtual Methods  (displaying student details). 
+using System;<br>
+
+namespace studentusing System;
+
+namespace student<br>
+{<br>
+    class PersonalDetails<br>
+    {<br>
+        string name;<br>
+        int age;<br>
+        string gender;<br>
+        public PersonalDetails(string name, int age, string gender)<br>
+        {<br>
+            this.name = name;<br>
+            this.age = age;<br>
+            this.gender = gender;<br>
+        }<br>
+        public virtual void Display()<br>
+        {<br><br>
+            Console.WriteLine("\n_________________PERSONAL DETAILS________________");<br>
+            Console.WriteLine("Name              :" + name);<b<br>r>
+            Console.WriteLine("Age              :" + age);<br>
+            Console.WriteLine("Gender              :" + gender);<br><br>
+        }<br>
+    }<br>
+        class CourseDetails:PersonalDetails<br>
+    {<br>
+        int regNo;<br>
+        string course;<br>
+        int semester;<br><br>
+        public CourseDetails(string name,int age,string gender,int regNo,string course,int semester):base(name,age,gender)<br>
+        {<br>
+            this.regNo = regNo;<br>
+            this.course = course;<br>
+            this.semester = semester;<br>
+
+        }<br>
+        public override void Display()<br>
+        {<br>
+            base.Display();<br>
+            Console.WriteLine("\n_____________________COURSEDETAILS____________");<br>
+            Console.WriteLine("Register Number        :" + regNo);<br>
+            Console.WriteLine("course        :" + course);<br>
+            Console.WriteLine("Semester        :" +semester);<br>
+
+        }<br>
+    }<br>
+    class MarksDetails:CourseDetails<br>
+    {<br>
+        int[] marks = new int[5];<br>
+        int total;<br>
+        float average;<br>
+        string grade;<br>
+        int flagFail;<br>
+        public MarksDetails(string name, int age, string gender, int regNo, string course, int semester, int[] marks) : base(name, age, gender, regNo, course, semester)<br>
+
+        {
+            total = 0;<br>
+            for (int i = 0; i < 5; i++)<br>
+            {<br>
+                this.marks[i] = marks[i];<br>
+                total += marks[i];<br>
+                if (marks[i] < 35)<br>
+                {<br>
+                    flagFail = 1;<br>
+                }<br>
+            }<br>
+            Calculate();<br>
+        }<br>
+            private void Calculate()<br>
+            {<br>
+                average = total / 5;<br>
+                if (flagFail == 1 || average < 40)<br>
+                    grade = "fail";<br>
+                else if (average >= 70)<br>
+                    grade = " destinction";<br>
+                else if (average >= 60)<br>
+                    grade = "first class";<br>
+                else if (average >= 50)<br>
+                    grade = "second class";<br>
+                else<br>
+                    grade = "pass class";<br>
+            }<br>
+            public override void Display()<br>
+        {<br>
+            base.Display();<br>
+            Console.WriteLine("_______________Marks details_______________");<br>
+            Console.WriteLine("marks in 5 subejects");<br>
+            for(int i=0;i<5;i++)<br>
+                Console.WriteLine(marks[i]+   "");<br>
+                 Console.WriteLine();<br>
+            Console.WriteLine("total         :"+total);<br>
+            Console.WriteLine("Average         :" + average);<br>
+            Console.WriteLine("garde         :" + grade);<br>
+          }<br>
+
+         }<br>
+    class Multilevel<br>
+    {<br>
+        public static void Main(string[] args)<br>
+        {<br>
+            MarksDetails student1 = new MarksDetails("prajna", 21, "female", 20120000, "MSC", 5, new int[] { 77, 80, 98, 95, 90 });<br>
+            student1.Display();<br>
+        }<br>
+    }<br>
+    }<br>
+        
+
+{<br>
+    class PersonalDetails<br>
+    {<br>
+        string name;<br>
+        int age;<br>
+        string gender;<br>
+        public PersonalDetails(string name, int age, string gender)<br>
+        <br>
+        {
+            this.name = name;<br>
+            this.age = age;<br>
+            this.gender = gender;<br>
+        }<br>
+        public virtual void Display()<br>
+        {<br>
+            Console.WriteLine("\n_________________PERSONAL DETAILS________________");<br>
+            Console.WriteLine("Name              :" + name);<br>
+            Console.WriteLine("Age              :" + age);<br>
+            Console.WriteLine("Gender              :" + gender);<br>
+        }<br>
+    }<br>
+        class CourseDetails:PersonalDetails<br>
+    {<br>
+        int regNo;<br>
+        string course;<br>
+        int semester;<br>
+        public CourseDetails(string name,int age,string gender,int regNo,string course,int semester):base(name,age,gender)<br>
+        {<br>
+            this.regNo = regNo;<br>
+            this.course = course;<br>
+            this.semester = semester;<br>
+
+        }<br>
+        public override void Display()<br>
+        {<br>
+            base.Display();<br>
+            Console.WriteLine("\n_____________________COURSEDETAILS____________");<br>
+            Console.WriteLine("Register Number        :" + regNo);<br>
+            Console.WriteLine("course        :" + course);<br>
+            Console.WriteLine("Semester        :" +semester);<br>
+
+        }<br>
+    }<br>
+    class MarksDetails:CourseDetails<br>
+    {<br>
+        int[] marks = new int[5];<br>
+        int total;<br>
+        float average;<br>
+        string grade;<br>
+        int flagFail;<br>
+        public MarksDetails(string name, int age, string gender, int regNo, string course, int semester, int[] marks) : base(name, age, gender, regNo, course, semester)<br>
+
+        {<br>
+            total = 0;<br>
+            for (int i = 0; i < 5; i++)<br>
+            {<br>
+                this.marks[i] = marks[i];<br>
+                total += marks[i];<br><br>
+                if (marks[i] < 35)
+                {<br>
+                    flagFail = 1;<br>
+                }<br>
+            }<br>
+            Calculate();<br>
+        }<br>
+            private void Calculate()<br>
+            {<br>
+                average = total / 5;<br>
+                if (flagFail == 1 || average < 40)<br>
+                    grade = "fail";<br>
+                else if (average >= 70)<br><br>
+                    grade = " destinction";<br>
+                else if (average >= 60)<br>
+                    grade = "first class";<br>
+                else if (average >= 50)<br>
+                    grade = "second class";<br>
+                else<br>
+                    grade = "pass class";<br>
+            }<br>
+            public override void Display()<br>
+        {<br>
+            base.Display();<br>
+            Console.WriteLine("_______________Marks details_______________");<br>
+            Console.WriteLine("marks in 5 subejects");<br>
+            for(int i=0;i<5;i++)<br>
+                Console.WriteLine(marks[i]+   "");<br>
+                 Console.WriteLine();<br>
+            Console.WriteLine("total         :"+total);<br>
+            Console.WriteLine("Average         :" + average);<br>
+            Console.WriteLine("garde         :" + grade);<br>
+          }<br>
+
+         }<br>
+    class Multilevel<br>
+    {
+        public static void Main(string[] args)<br>
+        {<br>
+            MarksDetails student1 = new MarksDetails("prajna", 21, "female", 20120000, "MSC", 5, new int[] { 77, 80, 98, 95, 90 });<br>
+            student1.Display();<br>
+        }<br>
+    }<br>
+    }<br>
+    
+  
+ ![image](https://user-images.githubusercontent.com/97970956/154626838-d13cba68-9258-485a-91bd-30594d577644.png)
+ 
+
+  
+  
+
+4.C# Program to Create a Gray Code
+
+using System;<br>
+
+namespace ex3<br>
+{<br>
+    class GrayCode<br>
+    {<br>
+
+        static int getGray(int n)<br>
+        {<br>
+            return n ^ (n >> 1);
+        }
+        static void Main(string[] args)<br>
+        {<br>
+            int InputNum, GrayNum;<br>
+            Console.Write("\nEnter the decimal number: ");<br>
+            InputNum = Convert.ToInt32(Console.ReadLine());<br>
+            Console.WriteLine("\nBinary equivalent of {0}: {1}", InputNum, Convert.ToString(InputNum, 2));<br>
+            GrayNum = getGray(InputNum);<br>
+            Console.WriteLine("\nGray Code equivalent of {0}: {1}", InputNum, Convert.ToString(GrayNum, 2));<br>
+        }<br>
+    }<br>
+}<br>
+
+
+![image](https://user-images.githubusercontent.com/97970956/154626602-e254a9f8-1849-46c5-8052-fd73d85d46e5.png)
+
+
+5. C# program to calculate volume of 2 boxes and find the resultant volume  after addition of 2 boxes by implementing operator overloading. 
+
+using System;<br>
+
+namespace ex5<br><br>
+{<br>
+    class Box<br>
+    {<br>
+        float width;<br>
+        float height;<br>
+        float length;<br>
+        public float Volume<br>
+        {<br>
+            get { return width * height * length; }<br>
+        }<br>
+        public Box(float width, float height, float length)<br>
+        {<br>
+            this.width = width;<br>
+            this.height = height;<br>
+            this.length = height;<br>
+        }<br>
+        public static float operator +(Box box1, Box box2)<br>
+        {<br>
+            return box1.Volume + box2.Volume;<br>
+        }<br>
+        public override String ToString()<br>
+        {<br>
+            return "box with width " + width + ", height " + height + " and length " + length;<br>
+        }<br>
+    }<br>
+    class OperatorOverloading<br>
+    {<br>
+        public static void Main()<br>
+        {<br>
+            Box box1 = new Box(10, 20, 30);<br>
+            Box box2 = new Box(25, 32, 15);<br>
+            Console.WriteLine("Volume of {0} is: {1}", box1, box1.Volume); Console.WriteLine("Volume of {0} is: {1}", box2, box2.Volume);<br>
+
+        Console.WriteLine("Volume after adding boxes: {0}", box1 + box2);<br>
+        }<br>
+    }<br>
+}<br>
+
+![image](https://user-images.githubusercontent.com/97970956/154628073-261beb47-899e-4c98-b6b2-160d33bcc12c.png)
+
+
+using System;
+
+6.. C# Program to Implement Principles of Delegates (converting input string to  uppercase first, last and entire string). 
+
+namespace upppercase<br>
+
+{<br>
+    class delegates<br>
+    {<br>
+        delegate string UppercaseDelegates(string input);<br>
+        static string UppercaseFirst(string input)<br>
+        {<br>
+            char[] buffer = input.ToCharArray();<br>
+            buffer[0] = char.ToUpper(buffer[0]);<br>
+            return new string(buffer);<br>
+        }<br>
+        static string UppercaseLast(string input)<br>
+        {<br>
+            char[] buffer = input.ToCharArray();<br>
+            buffer[buffer.Length - 1] = char.ToUpper(buffer[buffer.Length - 1]);<br>
+            return new string(buffer);<br><br>
+        }<br>
+        static string UppercaseAll(string input)<br>
+        {<br>
+        return input.ToUpper();<br>
+        }<br>
+        static void WriteOutput(string input, UppercaseDelegates del)<br>
+        {<br>
+            Console.WriteLine("Input String:{0}", input);<br>
+            Console.WriteLine("Output String:{0}", del(input));<br>
+
+         }<br>
+     static void Main()<br>
+        {<br>
+            WriteOutput("tom", new UppercaseDelegates(UppercaseFirst));<br>
+            WriteOutput("tom", new UppercaseDelegates(UppercaseLast));<br>
+            WriteOutput("tom", new UppercaseDelegates(UppercaseAll));<br>
+            Console.ReadLine();<br>
+        }<br>
+    }<<br>
+}<br>
+
+![image](https://user-images.githubusercontent.com/97970956/154628942-8b16e0de-0521-43f4-9cc4-ea30e324bf9f.png)
+
+
+7. C# Program to Generate Register Number automatically for 100 Students  using Static Constructor.
+using System;
+
+namespace Register<br>
+{<br>
+    class RegisterNum<br>
+
+    {<br>
+        int regno;<br>
+        static int startNum;<br>
+        static RegisterNum()<br>
+        {<br>
+            startNum = 20210000;<br>
+        }<br>
+        RegisterNum()<br>
+        {<br>
+            regno = ++startNum;<br>
+        }<br>
+        public static void Main(string[] args)<br>
+        {<br><br>
+            for(int i=0;i<=100;i++)<br>
+            {<br>
+                RegisterNum Student = new RegisterNum();<br>
+                Console.WriteLine("student{0}:{1}",i+1, Student.regno);<br>
+            }<br>
+        }<br>
+
+        
+    }<br>
+}<br>
+
+![image](https://user-images.githubusercontent.com/97970956/154631352-e4fe7f0e-2029-4d5b-bd36-cf72c0fa4493.png)
+![image](https://user-images.githubusercontent.com/97970956/154631406-49a9a180-7faf-42b5-8fdf-669439d9b8fa.png)
+
+
+
+
+8.C# Program to Find the Frequency of the Word ʺisʺ in a given Sentence. 
+
+using System;
+
+namespace freequency<br>
+{<br>
+    class freequencyIS<br>
+    {<br>
+        static void Main(string[] args)<br>
+        {<br>
+            int count = 0;<br>
+            string inputString;<br>
+            Console.WriteLine("--------------FREQUENCY OF WORD IS-----------");<br>
+            Console.Write("\n Enter the input string");<br>
+            inputString = Console.ReadLine();<br>
+            char[] seperator = { ',', ' ', '.', '!', '\n' };<br>
+            string testString = inputString.ToLower();<br>
+            string[] outcomes = testString.Split(seperator);<br>
+            foreach(string s in outcomes)<br>
+            {<br>
+                Console.WriteLine(s);<br>
+                if (s == "is")<br>
+                    count++;<br>
+            }<br>
+            Console.WriteLine("\n Number of 'is' in' " + inputString + "'is: " + count);<br>
+
+        }<br>
+    }<br>
+}<br>
+
+
+
+![image](https://user-images.githubusercontent.com/97970956/154631143-13e10557-c570-4c14-ac47-77fd99cc20d1.png)
+
+
+9.C# program that benchmarks 2D, jagged array allocation. 
+using System;
+using System.Diagnostics;<br>
+
+
+namespace benchmarks<br>
+{<br>
+    class BenchmarkAllocation<br>
+
+    {<br>
+        const int Max=10000;<br>
+        static void Main(string[] args)<br>
+        {<br>
+            var Arr2D = new int[1000, 100];<br>
+            var ArrJagged = new int[100][];<br>
+            for(int i=0;i<100;i++)<br>
+            {<br>
+                ArrJagged[i] = new int[100];<br>
+
+            }<br>
+            var Stopwatch2D = Stopwatch.StartNew();<br>
+            for (int i = 0; i <Max; i++)<br>
+            {<br>
+                for (int j = 0; j < 100; j++)<br>
+                {<br>
+
+                    for (int k = 0; k < 100; k++)<br>
+                    
+                    {<br>
+                        Arr2D[j, k] = k;<br>
+                        
+                    }<br>
+                }<br>
+            }<br>
+            Stopwatch2D.Stop();<br>
+                var StopwatchJagged = Stopwatch.StartNew();<br>
+            for (int i = 0; i < Max; i++)<br>
+            {<br>
+                for (int j = 0; j < 100; j++)<br>  
+                {<br>
+                for (int k = 0; k < 100; k++)<br>
+                
+                    {<br>
+                        ArrJagged[j][k]=k;<br>
+                    }<br>
+                }<br>
+            }<br>
+            StopwatchJagged.Stop();<br>
+            Console.WriteLine("\n Time taken for allocation incase of 2D array:");<br>
+            Console.WriteLine(Stopwatch2D.Elapsed.TotalMilliseconds+"milliseconds");<br>
+            Console.WriteLine("the time taken for allocation in case of Jagged array");<br>
+            Console.WriteLine(StopwatchJagged.Elapsed.TotalMilliseconds + "milliseconds");<br>
+        }<br>
+    }<br>
+}<br>
+![image](https://user-images.githubusercontent.com/97970956/154632699-40ee54cf-6183-4f4e-ba8c-e1bd07e5270b.png)
+
+10.C# Program to Find the Sum of the Values on Diagonal of the Matrix. using System; 
+using System;
+
+namespace ex10
+{
+    class SumOfDiagonals
+    {
+        static void Main(string[] args)
+        {
+            int MaxRow, MaxCol, Sum = 0;
+            int[,] Matrix;
+            Console.WriteLine("\n---------- SUM OF DIAGONAL OF A MATRIX ----------\n"); Console.Write("\nEnter the number of rows: ");
+            MaxRow = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nEnter the number of columns: ");
+            MaxCol = Convert.ToInt32(Console.ReadLine());
+            if (MaxRow != MaxCol)
+            {
+                Console.WriteLine("\nThe Dimensions entered are not of Square Matrix."); Console.WriteLine("\nExiting the Program..");
+                return;
+            }
+            Matrix = new int[MaxRow, MaxCol];
+            for (int i = 0; i < MaxRow; i++)
+            {
+                for (int j = 0; j < MaxCol; j++)
+                {
+                    Console.Write("\nEnter the ({0},{1})th element of the matrix: ", (i + 1), (j + 1)); Matrix[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("\nThe entered Matrix is: ");
+            for (int i = 0; i < MaxRow; i++)
+            {
+                for (int j = 0; j < MaxCol; j++)
+                {
+                    Console.Write(" " + Matrix[i, j]);
+                    if (i == j)
+                    {
+                    Sum += Matrix[i, j];
+                    }
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("\nThe Sum of Diagonal is " + Sum);
+        }
+    }
+}
+
+![image](https://user-images.githubusercontent.com/97970956/154633626-af924c82-b262-4da9-877b-cca2aafb7735.png)
+
+
+
+
+
+        
+
