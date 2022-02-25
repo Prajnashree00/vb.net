@@ -349,21 +349,17 @@ namespace ex5<br><br>
             Box box1 = new Box(10, 20, 30);<br>
             Box box2 = new Box(25, 32, 15);<br>
             Console.WriteLine("Volume of {0} is: {1}", box1, box1.Volume); Console.WriteLine("Volume of {0} is: {1}", box2, box2.Volume);<br>
-
-        Console.WriteLine("Volume after adding boxes: {0}", box1 + box2);<br>
+            Console.WriteLine("Volume after adding boxes: {0}", box1 + box2);<br>
         }<br>
     }<br>
 }<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/154628073-261beb47-899e-4c98-b6b2-160d33bcc12c.png)
 
-
-using System;
-
 **6.. C# Program to Implement Principles of Delegates (converting input string to  uppercase first, last and entire string). **
 
+using System;
 namespace upppercase<br>
-
 {<br>
     class delegates<br>
     {<br>
@@ -388,7 +384,6 @@ namespace upppercase<br>
         {<br>
             Console.WriteLine("Input String:{0}", input);<br>
             Console.WriteLine("Output String:{0}", del(input));<br>
-
          }<br>
      static void Main()<br>
         {<br>
@@ -399,7 +394,6 @@ namespace upppercase<br>
         }<br>
     }<<br>
 }<br>
-
 ![image](https://user-images.githubusercontent.com/97970956/154628942-8b16e0de-0521-43f4-9cc4-ea30e324bf9f.png)
 
 
