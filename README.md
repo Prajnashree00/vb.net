@@ -967,5 +967,66 @@ public class PalindromeExample
 ![image](https://user-images.githubusercontent.com/97970956/155661216-9090ce36-7519-42a5-acbe-cfeb02960950.png)
 
 **19.write thye c# program to find the factorial of the number**
+using System;
+public class FactorialExample
+{
+    public static void Main(string[] args)
+    {
+        int i, fact = 1, number;
+        Console.Write("Enter any Number: ");
+        number = int.Parse(Console.ReadLine());
+        for (i = 1; i <= number; i++)
+        {
+            fact = fact * i;
+        }
+        Console.Write("Factorial of " + number + " is: " + fact);
+    }
+}
+
+![image](https://user-images.githubusercontent.com/97970956/155662482-9d25d469-717f-4d2b-9902-6da889925339.png)
+**20.write a program to find the sum of digits**
+using System;  
+  public class SumExample  
+   {  
+     public static void Main(string[] args)  
+      {  
+       int  n,sum=0,m;         
+       Console.Write("Enter a number: ");      
+       n= int.Parse(Console.ReadLine());     
+       while(n>0)      
+       {      
+        m=n%10;      
+        sum=sum+m;      
+        n=n/10;      
+       }      
+       Console.Write("Sum is= "+sum);       
+     }  
+  }  
+  
+  ![image](https://user-images.githubusercontent.com/97970956/155663758-c0b65fc3-d94c-4fe6-beef-10a619359590.png)
+  **21.reverse the number**
+  using System;
+public class ReverseExample
+{
+    public static void Main(string[] args)
+    {
+        int n, reverse = 0, rem;
+        Console.Write("Enter a number: ");
+        n = int.Parse(Console.ReadLine());
+        while (n != 0)
+        {
+            rem = n % 10;
+            reverse = reverse * 10 + rem;
+            n /= 10;
+        }
+        Console.Write("Reversed Number: " + reverse);
+    }
+}
+
+![image](https://user-images.githubusercontent.com/97970956/155664224-a78ec3ab-f0d3-4421-a5eb-f6fd08866898.png)
+
+
+
+
 
 
