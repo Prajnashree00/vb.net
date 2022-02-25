@@ -984,47 +984,64 @@ public class FactorialExample
 }
 
 ![image](https://user-images.githubusercontent.com/97970956/155662482-9d25d469-717f-4d2b-9902-6da889925339.png)
-**20.write a program to find the sum of digits**
-using System;  
-  public class SumExample  
-   {  
-     public static void Main(string[] args)  
-      {  
-       int  n,sum=0,m;         
-       Console.Write("Enter a number: ");      
-       n= int.Parse(Console.ReadLine());     
-       while(n>0)      
-       {      
-        m=n%10;      
-        sum=sum+m;      
-        n=n/10;      
-       }      
-       Console.Write("Sum is= "+sum);       
-     }  
-  }  
+**20.write a program to find the sum of digits**<br>
+using System;  <br>
+  public class SumExample <br> 
+   {  <br>
+     public static void Main(string[] args)  <br>
+      {  <br>
+       int  n,sum=0,m;  <br>       
+       Console.Write("Enter a number: ");  <br>    
+       n= int.Parse(Console.ReadLine()); <br>    
+       while(n>0) <br>     
+       { <br>     
+        m=n%10;  <br>    
+        sum=sum+m;<br>      
+        n=n/10; <br>     
+       }<br>      
+       Console.Write("Sum is= "+sum);  <br>     
+     }<br>
+  }<br>
   
   ![image](https://user-images.githubusercontent.com/97970956/155663758-c0b65fc3-d94c-4fe6-beef-10a619359590.png)
-  **21.reverse the number**
-  using System;
-public class ReverseExample
-{
-    public static void Main(string[] args)
-    {
-        int n, reverse = 0, rem;
-        Console.Write("Enter a number: ");
-        n = int.Parse(Console.ReadLine());
-        while (n != 0)
-        {
-            rem = n % 10;
-            reverse = reverse * 10 + rem;
-            n /= 10;
-        }
-        Console.Write("Reversed Number: " + reverse);
-    }
+  **21.reverse the number**<br>
+  using System;<br>
+public class ReverseExample<br>
+
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n, reverse = 0, rem;<br>
+        Console.Write("Enter a number: ");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        while (n != 0)<br>
+        {<br>
+            rem = n % 10;<br>
+            reverse = reverse * 10 + rem;<br>
+            n /= 10;<br>
+        }<br>
+        Console.Write("Reversed Number: " + reverse);<br>
+   <br> }<br>
 }
 
 ![image](https://user-images.githubusercontent.com/97970956/155664224-a78ec3ab-f0d3-4421-a5eb-f6fd08866898.png)
 
+**22.swap a number**<br>
+using System;  <br>
+  public class SwapExample  <br>
+   {  <br>
+     public static void Main(string[] args)  <br>
+      {  <br>
+       int  a=5, b=10; <br>           
+       Console.WriteLine("Before swap a= "+a+" b= "+b);<br>    
+       a=a*b; //a=50 (5*10)<br>      
+       b=a/b; //b=5 (50/10)  <br>    
+       a=a/b; //a=10 (50/5)  <br>  
+       Console.Write("After swap a= "+a+" b= "+b); <br>      
+     } <br> 
+  }   <br>
+  
+  ![image](https://user-images.githubusercontent.com/97970956/155664725-9cea9143-7f34-43e3-af24-77d1664b33e7.png)
 
 
 
