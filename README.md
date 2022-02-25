@@ -798,6 +798,174 @@ namespace ex13
 ![image](https://user-images.githubusercontent.com/97970956/154637892-c2511ee7-20b1-455d-ba6d-4ed7a2b10cf4.png)
 
 
+**14.create a thred pool**
+using System;
+using System.Threading;
 
-        
+namespace Pool
+{
+    class ThreadPoolProg
+    {
+        public void ThreadFun1(object obj)
+        {
+            int loop = 0;
+            for (loop = 0; loop <= 4; loop++)
+            {
+                Console.WriteLine("Thread 1 is executing");
+            }
+
+        }
+        public void ThreadFun2(Object Obj)
+        {
+            int loop = 0;
+            for (loop = 0; loop <= 4; loop++)
+            {
+                Console.WriteLine("Thread 1 is executing");
+
+            }
+        }
+        public static  void Main()
+        {
+            ThreadPoolProg TP = new ThreadPoolProg();
+            for (int i = 0; i <= 2; i++)
+            {
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun1));
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun2));
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+![image](https://user-images.githubusercontent.com/97970956/155658420-0b045807-fe6f-4384-84db-89f0f06e4c62.png)
+
+**15.c# program to demostrate error handling using try catch and finally block**
+using System;
+
+namespace ex15
+{
+    class ExceptionHandling
+    {
+        static void Main(string[] args)
+        {
+            Age a = new Age();
+            try
+            {
+                a.displayAge();
+            }
+            catch (AgeIsNegativeException e)
+            {
+                Console.WriteLine("AgeIsNegativeExpection:{0}", e.Message);
+
+            }
+            finally
+            {
+                Console.WriteLine("Exception of finally block is done");
+
+            }
+        }
+    }
+}
+public class AgeIsNegativeException : Exception
+{
+    public AgeIsNegativeException(string Message) : base(Message)
+    {
+
+    }
+
+}
+public class Age
+{
+    int age = -5;
+    public void displayAge()
+    {
+        if(age<0)
+        {
+            throw (new AgeIsNegativeException("Age cacanot be negative"));
+        }
+        else
+        {
+            Console.WriteLine("Age is:{0}", age);
+        }
+    }
+}
+
+![image](https://user-images.githubusercontent.com/97970956/155658714-f3552135-c0e6-48ec-a3c6-e694340ee510.png)
+
+
+**16.c# program to generate the fibanaci series**
+using System;
+
+public class FibonacciExample
+{
+    public static void Main(string[] args)
+    {
+        int n1 = 0, n2 = 1, n3, i, number;
+        Console.Write("Enter the number of elements: ");
+        number = int.Parse(Console.ReadLine());
+        Console.Write(n1 + " " + n2 + " "); //printing 0 and 1    
+        for (i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    
+        {
+            n3 = n1 + n2;
+            Console.Write(n3 + " ");
+            n1 = n2;
+            n2 = n3;
+        }
+    }
+}
+
+![image](https://user-images.githubusercontent.com/97970956/155659389-165cc0a5-c16f-4f11-ac9f-6974cd65985d.png)
+
+**17.c# program to check the prime number is or not**
+using System;
+public class PrimeNumberExample
+{
+    public static void Main(string[] args)
+    {
+        int n, i, m = 0, flag = 0;
+        Console.Write("Enter the Number to check Prime: ");
+        n = int.Parse(Console.ReadLine());
+        m = n / 2;
+        for (i = 2; i <= m; i++)
+        {
+            if (n % i == 0)
+            {
+                Console.Write("Number is not Prime.");
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 0)
+            Console.Write("Number is Prime.");
+    }
+}
+![image](https://user-images.githubusercontent.com/97970956/155659646-20e8dbcb-58f7-4545-8c1d-a05324309071.png)
+
+**18.c# program to check whether palindrome or not**
+using System;
+public class PalindromeExample
+{
+    public static void Main(string[] args)
+    {
+        int n, r, sum = 0, temp;
+        Console.Write("Enter the Number: ");
+        n = int.Parse(Console.ReadLine());
+        temp = n;
+        while (n > 0)
+        {
+            r = n % 10;
+            sum = (sum * 10) + r;
+            n = n / 10;
+        }
+        if (temp == sum)
+            Console.Write("Number is Palindrome.");
+        else
+            Console.Write("Number is not Palindrome");
+    }
+}
+
+![image](https://user-images.githubusercontent.com/97970956/155661216-9090ce36-7519-42a5-acbe-cfeb02960950.png)
+
+**19.write thye c# program to find the factorial of the number**
+
 
