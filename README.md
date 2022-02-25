@@ -357,7 +357,6 @@ namespace ex5<br><br>
 ![image](https://user-images.githubusercontent.com/97970956/154628073-261beb47-899e-4c98-b6b2-160d33bcc12c.png)
 
 **6.. C# Program to Implement Principles of Delegates (converting input string to  uppercase first, last and entire string). **
-
 using System;
 namespace upppercase<br>
 {<br>
@@ -477,9 +476,7 @@ namespace benchmarks<br>
             {<br>
                 for (int j = 0; j < 100; j++)<br>
                 {<br>
-
                     for (int k = 0; k < 100; k++)<br>
-                    
                     {<br>
                         Arr2D[j, k] = k;<br> 
                     }<br>
@@ -556,10 +553,8 @@ namespace ex10
 
 
 **11.C# Program to Create a File, Check the Existence of a File and Read the  Contents of the File.**
-using System;
+using System;<br>
 using System.IO;<br>
-
-
 namespace create<br>
 {<br>
     class FileRead<br>
@@ -613,8 +608,6 @@ namespace create<br>
                                 while ((s = sr.ReadLine()) != null)<br>
                                 {<br>
                                     Console.WriteLine(s);<br>
-
-
                                 }<br>
                                 Console.WriteLine(" ");<br>
                             }
@@ -636,9 +629,7 @@ namespace create<br>
     }  
  }
 ![image](https://user-images.githubusercontent.com/97970956/154636277-f73dfc6a-eef1-4c6f-aeed-29b1f9479a35.png)
-
-   ![image](https://user-images.githubusercontent.com/97970956/154636121-1a69130c-22cc-43e0-82ff-2c7796243feb.png)
-
+![image](https://user-images.githubusercontent.com/97970956/154636121-1a69130c-22cc-43e0-82ff-2c7796243feb.png)
 ![image](https://user-images.githubusercontent.com/97970956/154636191-7d1e85da-545d-4e15-8ec1-6ff37b7e567b.png)
 
 **12.C# Program to Perform File Comparison**
@@ -675,19 +666,13 @@ namespace comparision<br>
         }<br>
     }<br>
 }<br>
-
-        
 ![image](https://user-images.githubusercontent.com/97970956/154637057-788bdf1d-cfc8-4459-b8b8-3d62147728c1.png)
-
 ![image](https://user-images.githubusercontent.com/97970956/154637102-bf19bcb1-9925-408f-90d6-31159262c3c8.png)
-
 ![image](https://user-images.githubusercontent.com/97970956/154637167-0e165ecd-94cd-4912-b442-da41610bc49f.png)
 ![image](https://user-images.githubusercontent.com/97970956/154637496-766975d2-2ba8-4197-a47d-e95e3be54b70.png)
 ![image](https://user-images.githubusercontent.com/97970956/154637547-5d1deafb-ed4c-48ff-b158-9543d0f275c5.png)
 
-
 **13.. C# Program to Implement IComparable Interface
-
 using System;<br>
 namespace ex13<br>
 {<br>
@@ -722,8 +707,6 @@ namespace ex13<br>
             return z + "/" + n;<br>
         }<br>
     }<br>
-
-
     class ICompInterface<br>
     {<br>
         public static void Main()<br>
@@ -747,14 +730,10 @@ namespace ex13<br>
         }<br>     
     }<br>
 }<br>
-
 ![image](https://user-images.githubusercontent.com/97970956/154637892-c2511ee7-20b1-455d-ba6d-4ed7a2b10cf4.png)
-
-
 **14.create a thred pool**
 using System;<br>
 using System.Threading;<br>
-
 namespace Pool<br>
 {<br>
     class ThreadPoolProg<br>
@@ -766,15 +745,13 @@ namespace Pool<br>
             {<br>
                 Console.WriteLine("Thread 1 is executing");<br>
             }<br>
-
-        }<br>
+         }<br>
         public void ThreadFun2(Object Obj)<br>
         {<br>
             int loop = 0;<br>
             for (loop = 0; loop <= 4; loop++)<br>
             {<br>
                 Console.WriteLine("Thread 1 is executing");<br>
-
             }<br>
         }<br>
         public static  void Main()<br>
@@ -794,7 +771,6 @@ namespace Pool<br>
 
 **15.c# program to demostrate error handling using try catch and finally block**
 using System;<br>
-
 namespace ex15<br>
 {<br>
     class ExceptionHandling<br>
@@ -809,12 +785,10 @@ namespace ex15<br>
             catch (AgeIsNegativeException e)<br>
             {<br>
                 Console.WriteLine("AgeIsNegativeExpection:{0}", e.Message);<br>
-
             }<br>
             finally<br>
             {<br>
                 Console.WriteLine("Exception of finally block is done");<br>
-
             }<br>
         }<br>
     }<br>
@@ -823,9 +797,7 @@ public class AgeIsNegativeException : Exception<br>
 {<br>
     public AgeIsNegativeException(string Message) : base(Message)<br>
     {<br>
-
     }<br>
-
 }<br>
 public class Age<br>
 {<br>
@@ -845,10 +817,8 @@ public class Age<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/155658714-f3552135-c0e6-48ec-a3c6-e694340ee510.png)
 
-
 **16.c# program to generate the fibanaci series**
 using System;<br>
-
 public class FibonacciExample<br>
 {<br>
     public static void Main(string[] args)<br>
@@ -960,7 +930,6 @@ using System;  <br>
   **21.reverse the number**<br>
   using System;<br>
 public class ReverseExample<br>
-
 {<br>
     public static void Main(string[] args)<br>
     {<br>
@@ -992,9 +961,8 @@ using System;  <br>
        a=a/b; //a=10 (50/5)  <br>  
        Console.Write("After swap a= "+a+" b= "+b); <br>      
      } <br> 
-  }   <br>
-  
-  ![image](https://user-images.githubusercontent.com/97970956/155664725-9cea9143-7f34-43e3-af24-77d1664b33e7.png)
+     }   <br>
+![image](https://user-images.githubusercontent.com/97970956/155664725-9cea9143-7f34-43e3-af24-77d1664b33e7.png)
 
 
 
