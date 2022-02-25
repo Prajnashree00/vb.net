@@ -678,47 +678,40 @@ namespace create<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/154636191-7d1e85da-545d-4e15-8ec1-6ff37b7e567b.png)
 
-
-**12.C# Program to Perform File Comparison
-using System;
-using System.IO;
-
-
-namespace comparision
-{
-    class FileRead
-    {
-        public static void Main()
-        {
-            string file1;
-            string file2;
-            Console.Write("enter the first fiole path");
-            file1 = Console.ReadLine();
-            Console.Write("enther the second file path");
-            file2 = Console.ReadLine();
-            if(!File.Exists(file1))
-            {
-                Console.WriteLine("First file does not exist");
-
-            }
-           else  if (!File.Exists(file2))
-            {
-                Console.WriteLine("second file does not exist");
-
-            }
-              else if (File.ReadAllText(file1)==File.ReadAllText(file2))
-            {
-                Console.WriteLine("Both files contains the same content");
-
-            }
-            else 
-            {
-                Console.WriteLine("contents of files are not same");
-
-            }
-        }
-    }
-}
+**12.C# Program to Perform File Comparison**
+using System;<br>
+using System.IO;<br>
+namespace comparision<br>
+{<br>
+    class FileRead<br>
+    {<br>
+        public static void Main()<br>
+        {<br>
+            string file1;<br>
+            string file2;<br>
+            Console.Write("enter the first fiole path");<br>
+            file1 = Console.ReadLine();<br>
+            Console.Write("enther the second file path");<br>
+            file2 = Console.ReadLine();<br>
+            if(!File.Exists(file1))<br>
+            {<br>
+                Console.WriteLine("First file does not exist");<br>
+            }<br>
+           else  if (!File.Exists(file2))<br>
+            {<br>
+                Console.WriteLine("second file does not exist");<br>
+            }<br>
+              else if (File.ReadAllText(file1)==File.ReadAllText(file2))<br>
+            {<br>
+                Console.WriteLine("Both files contains the same content");<br>
+            }<br>
+            else <br>
+            {<br>
+                Console.WriteLine("contents of files are not same");<br>
+            }<br>
+        }<br>
+    }<br>
+}<br>
 
         
 ![image](https://user-images.githubusercontent.com/97970956/154637057-788bdf1d-cfc8-4459-b8b8-3d62147728c1.png)
@@ -732,256 +725,253 @@ namespace comparision
 
 **13.. C# Program to Implement IComparable Interface
 
-using System;
-namespace ex13
-{
-    class Fraction : IComparable
-    {
-        int z,n;
-        public Fraction(int z, int n)
-        {
-            this.z = z;
-            this.n = n;
-        }
-        public static Fraction operator +(Fraction a, Fraction b)
-        {
-            return new Fraction(a.z * b.n + a.n * b.z, a.n * b.n);
-        }
-        public static Fraction operator *(Fraction a, Fraction b)
-        {
-            return new Fraction(a.z * b.z, a.n * b.n);
-        }
-        public int CompareTo(object obj)
-        {
-            Fraction f = (Fraction)obj;
-            if ((float) z / n < (float)f.z / f.n)
-                    return -1;
-            else if ((float)z / n > (float)f.z / f.n)
-                return 1;
-            else
-                return 0;
-        }
+using System;<br>
+namespace ex13<br>
+{<br>
+    class Fraction : IComparable<br>
+    {<br>
+        int z,n;<br>
+        public Fraction(int z, int n)<br>
+        {<br>
+            this.z = z;<br>
+            this.n = n;<br>
+        }<br>
+        public static Fraction operator +(Fraction a, Fraction b)<br>
+        {<br>
+            return new Fraction(a.z * b.n + a.n * b.z, a.n * b.n);<br>
+        }<br>
+        public static Fraction operator *(Fraction a, Fraction b)<br>
+        {<br>
+            return new Fraction(a.z * b.z, a.n * b.n);<br>
+        }<br>
+        public int CompareTo(object obj)<br>
+        {<br>
+            Fraction f = (Fraction)obj;<br>
+            if ((float) z / n < (float)f.z / f.n)<br>
+                    return -1;<br>
+            else if ((float)z / n > (float)f.z / f.n)<br>
+                return 1;<br>
+            else<br>
+                return 0;<br>
+        }<br>
+            public override string ToString()<br>
+        {<br>
+            return z + "/" + n;<br>
+        }<br>
+    }<br>
 
-        public override string ToString()
-        {
-            return z + "/" + n;
-        }
-    }
 
-
-    class ICompInterface
-    {
-        public static void Main()
-        {
-            Fraction[] a =
-            {
-                new Fraction(5,2),
-                new Fraction(29,6),
-                new Fraction(4,5),
-                new Fraction(10,8),
-                new Fraction(34,7),
-
-            };
-            Array.Sort(a);
-            Console.WriteLine("Implementing the IComparabable interface in " + "Displaying Fraction:");
-            foreach (Fraction f in a)
-            {
-                Console.WriteLine(f + "");
-            }
-            Console.WriteLine();
+    class ICompInterface<br>
+    {<br>
+        public static void Main()<br>
+        {<br>
+            Fraction[] a =<br>
+            {<br>
+                new Fraction(5,2),<br>
+                new Fraction(29,6),<br>
+                new Fraction(4,5),<br>
+                new Fraction(10,8),<br>
+                new Fraction(34,7),<br>
+                };<br>
+            Array.Sort(a);<br>
+            Console.WriteLine("Implementing the IComparabable interface in " + "Displaying Fraction:");<br>
+            foreach (Fraction f in a)<br>
+            {<br>
+                Console.WriteLine(f + "");<br>
+            }<br>
+            Console.WriteLine();<br>
             Console.ReadLine();
-        }
-        
-    }
-}
+        }<br>     
+    }<br>
+}<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/154637892-c2511ee7-20b1-455d-ba6d-4ed7a2b10cf4.png)
 
 
 **14.create a thred pool**
-using System;
-using System.Threading;
+using System;<br>
+using System.Threading;<br>
 
-namespace Pool
-{
-    class ThreadPoolProg
-    {
-        public void ThreadFun1(object obj)
-        {
-            int loop = 0;
-            for (loop = 0; loop <= 4; loop++)
-            {
-                Console.WriteLine("Thread 1 is executing");
-            }
+namespace Pool<br>
+{<br>
+    class ThreadPoolProg<br>
+    {<br>
+        public void ThreadFun1(object obj)<br>
+        {<br>
+            int loop = 0;<br>
+            for (loop = 0; loop <= 4; loop++)<br>
+            {<br>
+                Console.WriteLine("Thread 1 is executing");<br>
+            }<br>
 
-        }
-        public void ThreadFun2(Object Obj)
-        {
-            int loop = 0;
-            for (loop = 0; loop <= 4; loop++)
-            {
-                Console.WriteLine("Thread 1 is executing");
+        }<br>
+        public void ThreadFun2(Object Obj)<br>
+        {<br>
+            int loop = 0;<br>
+            for (loop = 0; loop <= 4; loop++)<br>
+            {<br>
+                Console.WriteLine("Thread 1 is executing");<br>
 
-            }
-        }
-        public static  void Main()
-        {
-            ThreadPoolProg TP = new ThreadPoolProg();
-            for (int i = 0; i <= 2; i++)
-            {
-                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun1));
-                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun2));
-            }
-            Console.ReadKey();
-        }
-    }
-}
+            }<br>
+        }<br>
+        public static  void Main()<br>
+        {<br>
+            ThreadPoolProg TP = new ThreadPoolProg();<br>
+            for (int i = 0; i <= 2; i++)<br>
+            {<br>
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun1));<br>
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun2));<br>
+            }<br>
+            Console.ReadKey();<br>
+        }<br>
+    }<br>
+}<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/155658420-0b045807-fe6f-4384-84db-89f0f06e4c62.png)
 
 **15.c# program to demostrate error handling using try catch and finally block**
-using System;
+using System;<br>
 
-namespace ex15
-{
-    class ExceptionHandling
-    {
-        static void Main(string[] args)
-        {
-            Age a = new Age();
-            try
-            {
-                a.displayAge();
-            }
-            catch (AgeIsNegativeException e)
-            {
-                Console.WriteLine("AgeIsNegativeExpection:{0}", e.Message);
+namespace ex15<br>
+{<br>
+    class ExceptionHandling<br>
+    {<br>
+        static void Main(string[] args)<br>
+        {<br>
+            Age a = new Age();<br>
+            try<br>
+            {<br>
+                a.displayAge();<br>
+            }<br>
+            catch (AgeIsNegativeException e)<br>
+            {<br>
+                Console.WriteLine("AgeIsNegativeExpection:{0}", e.Message);<br>
 
-            }
-            finally
-            {
-                Console.WriteLine("Exception of finally block is done");
+            }<br>
+            finally<br>
+            {<br>
+                Console.WriteLine("Exception of finally block is done");<br>
 
-            }
-        }
-    }
-}
-public class AgeIsNegativeException : Exception
-{
-    public AgeIsNegativeException(string Message) : base(Message)
-    {
+            }<br>
+        }<br>
+    }<br>
+}<br>
+public class AgeIsNegativeException : Exception<br>
+{<br>
+    public AgeIsNegativeException(string Message) : base(Message)<br>
+    {<br>
 
-    }
+    }<br>
 
-}
-public class Age
-{
-    int age = -5;
-    public void displayAge()
-    {
-        if(age<0)
-        {
-            throw (new AgeIsNegativeException("Age cacanot be negative"));
-        }
-        else
-        {
-            Console.WriteLine("Age is:{0}", age);
-        }
-    }
-}
+}<br>
+public class Age<br>
+{<br>
+    int age = -5;<br>
+    public void displayAge()<br>
+    {<br>
+        if(age<0)<br>
+        {<br>
+            throw (new AgeIsNegativeException("Age cacanot be negative"));<br>
+        }<br>
+        else<br>
+        {<br>
+            Console.WriteLine("Age is:{0}", age);<br>
+        }<br>
+    }<br>
+}<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/155658714-f3552135-c0e6-48ec-a3c6-e694340ee510.png)
 
 
 **16.c# program to generate the fibanaci series**
-using System;
+using System;<br>
 
-public class FibonacciExample
-{
-    public static void Main(string[] args)
-    {
-        int n1 = 0, n2 = 1, n3, i, number;
-        Console.Write("Enter the number of elements: ");
-        number = int.Parse(Console.ReadLine());
-        Console.Write(n1 + " " + n2 + " "); //printing 0 and 1    
-        for (i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    
-        {
-            n3 = n1 + n2;
-            Console.Write(n3 + " ");
-            n1 = n2;
-            n2 = n3;
-        }
-    }
-}
+public class FibonacciExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n1 = 0, n2 = 1, n3, i, number;<br>
+        Console.Write("Enter the number of elements: ");<br>
+        number = int.Parse(Console.ReadLine());<br>
+        Console.Write(n1 + " " + n2 + " "); //printing 0 and 1  <br>  
+        for (i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed <br>   
+        {<br>
+            n3 = n1 + n2;<br>
+            Console.Write(n3 + " ");<br>
+            n1 = n2;<br>
+            n2 = n3;<br>
+        }<br>
+    }<br>
+}<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/155659389-165cc0a5-c16f-4f11-ac9f-6974cd65985d.png)
 
 **17.c# program to check the prime number is or not**
-using System;
-public class PrimeNumberExample
-{
-    public static void Main(string[] args)
-    {
-        int n, i, m = 0, flag = 0;
-        Console.Write("Enter the Number to check Prime: ");
-        n = int.Parse(Console.ReadLine());
-        m = n / 2;
-        for (i = 2; i <= m; i++)
-        {
-            if (n % i == 0)
-            {
-                Console.Write("Number is not Prime.");
-                flag = 1;
-                break;
-            }
-        }
-        if (flag == 0)
-            Console.Write("Number is Prime.");
-    }
-}
+using System;<br>
+public class PrimeNumberExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n, i, m = 0, flag = 0;<br>
+        Console.Write("Enter the Number to check Prime: ");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        m = n / 2;<br>
+        for (i = 2; i <= m; i++)<br>
+        {<br>
+            if (n % i == 0)<br>
+            {<br>
+                Console.Write("Number is not Prime.");<br>
+                flag = 1;<br>
+                break;<br>
+            }<br>
+        }<br>
+        if (flag == 0)<br>
+            Console.Write("Number is Prime.");<br>
+    }<br>
+}<br>
 ![image](https://user-images.githubusercontent.com/97970956/155659646-20e8dbcb-58f7-4545-8c1d-a05324309071.png)
 
 **18.c# program to check whether palindrome or not**
 using System;
-public class PalindromeExample
-{
-    public static void Main(string[] args)
-    {
-        int n, r, sum = 0, temp;
-        Console.Write("Enter the Number: ");
-        n = int.Parse(Console.ReadLine());
-        temp = n;
-        while (n > 0)
-        {
-            r = n % 10;
-            sum = (sum * 10) + r;
-            n = n / 10;
-        }
-        if (temp == sum)
-            Console.Write("Number is Palindrome.");
-        else
-            Console.Write("Number is not Palindrome");
-    }
-}
+public class PalindromeExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n, r, sum = 0, temp;<br>
+        Console.Write("Enter the Number: ");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        temp = n;<br>
+        while (n > 0)<br>
+        {<br>
+            r = n % 10;<br>
+            sum = (sum * 10) + r;<br>
+            n = n / 10;<br>
+        }<br>
+        if (temp == sum)<br>
+            Console.Write("Number is Palindrome.");<br>
+        else<br>
+            Console.Write("Number is not Palindrome");<br>
+    }<br>
+}<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/155661216-9090ce36-7519-42a5-acbe-cfeb02960950.png)
 
 **19.write thye c# program to find the factorial of the number**
-using System;
-public class FactorialExample
-{
-    public static void Main(string[] args)
-    {
-        int i, fact = 1, number;
-        Console.Write("Enter any Number: ");
-        number = int.Parse(Console.ReadLine());
-        for (i = 1; i <= number; i++)
-        {
-            fact = fact * i;
-        }
-        Console.Write("Factorial of " + number + " is: " + fact);
-    }
-}
+using System;<br>
+public class FactorialExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int i, fact = 1, number;<br>
+        Console.Write("Enter any Number: ");<br>
+        number = int.Parse(Console.ReadLine());<br>
+        for (i = 1; i <= number; i++)<br>
+        {<br>
+            fact = fact * i;<br>
+        }<br>
+        Console.Write("Factorial of " + number + " is: " + fact);<br>
+    }<br>
+}<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/155662482-9d25d469-717f-4d2b-9902-6da889925339.png)
 **20.write a program to find the sum of digits**<br>
