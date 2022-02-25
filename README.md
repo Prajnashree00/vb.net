@@ -396,14 +396,11 @@ namespace upppercase<br>
 }<br>
 ![image](https://user-images.githubusercontent.com/97970956/154628942-8b16e0de-0521-43f4-9cc4-ea30e324bf9f.png)
 
-
 **7. C# Program to Generate Register Number automatically for 100 Students  using Static Constructor.**
 using System;
-
 namespace Register<br>
 {<br>
     class RegisterNum<br>
-
     {<br>
         int regno;<br>
         static int startNum;<br>
@@ -423,21 +420,14 @@ namespace Register<br>
                 Console.WriteLine("student{0}:{1}",i+1, Student.regno);<br>
             }<br>
         }<br>
-
-        
     }<br>
 }<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/154631352-e4fe7f0e-2029-4d5b-bd36-cf72c0fa4493.png)
 ![image](https://user-images.githubusercontent.com/97970956/154631406-49a9a180-7faf-42b5-8fdf-669439d9b8fa.png)
 
-
-
-
 **8.C# Program to Find the Frequency of the Word ʺisʺ in a given Sentence. **
-
 using System;
-
 namespace freequency<br>
 {<br>
     class freequencyIS<br>
@@ -459,12 +449,9 @@ namespace freequency<br>
                     count++;<br>
             }<br>
             Console.WriteLine("\n Number of 'is' in' " + inputString + "'is: " + count);<br>
-
         }<br>
     }<br>
 }<br>
-
-
 
 ![image](https://user-images.githubusercontent.com/97970956/154631143-13e10557-c570-4c14-ac47-77fd99cc20d1.png)
 
@@ -472,12 +459,9 @@ namespace freequency<br>
 **9.C# program that benchmarks 2D, jagged array allocation. **
 using System;
 using System.Diagnostics;<br>
-
-
 namespace benchmarks<br>
 {<br>
     class BenchmarkAllocation<br>
-
     {<br>
         const int Max=10000;<br>
         static void Main(string[] args)<br>
@@ -487,7 +471,6 @@ namespace benchmarks<br>
             for(int i=0;i<100;i++)<br>
             {<br>
                 ArrJagged[i] = new int[100];<br>
-
             }<br>
             var Stopwatch2D = Stopwatch.StartNew();<br>
             for (int i = 0; i <Max; i++)<br>
@@ -498,8 +481,7 @@ namespace benchmarks<br>
                     for (int k = 0; k < 100; k++)<br>
                     
                     {<br>
-                        Arr2D[j, k] = k;<br>
-                        
+                        Arr2D[j, k] = k;<br> 
                     }<br>
                 }<br>
             }<br>
@@ -509,8 +491,7 @@ namespace benchmarks<br>
             {<br>
                 for (int j = 0; j < 100; j++)<br>  
                 {<br>
-                for (int k = 0; k < 100; k++)<br>
-                
+                for (int k = 0; k < 100; k++)<br>               
                     {<br>
                         ArrJagged[j][k]=k;<br>
                     }<br>
@@ -528,7 +509,6 @@ namespace benchmarks<br>
 
 **10.C# Program to Find the Sum of the Values on Diagonal of the Matrix. using System; **
 using System;
-
 namespace ex10
 {
     class SumOfDiagonals<br>
