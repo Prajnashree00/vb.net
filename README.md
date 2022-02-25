@@ -46,7 +46,6 @@ namespace ex2<br>
             Console.Write("\nEnter the second number: ");<br>
             num2 = Convert.ToInt32(Console.ReadLine());<br>
             for (int i = 1; i < num1; i++)<br>
-            
             {<br>
                 if (num1 % i == 0)<br>
                 {<br>
