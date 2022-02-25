@@ -286,23 +286,16 @@ namespace student<br>
     
   
  ![image](https://user-images.githubusercontent.com/97970956/154626838-d13cba68-9258-485a-91bd-30594d577644.png)
- 
-
-  
-  
 
 **4.C# Program to Create a Gray Code**
-
 using System;<br>
-
 namespace ex3<br>
 {<br>
     class GrayCode<br>
     {<br>
-
         static int getGray(int n)<br>
         {<br>
-            return n ^ (n >> 1);
+            return n ^ (n >> 1);<br>
         }
         static void Main(string[] args)<br>
         {<br>
@@ -323,7 +316,6 @@ namespace ex3<br>
 **5. C# program to calculate volume of 2 boxes and find the resultant volume  after addition of 2 boxes by implementing operator overloading. 
 **
 using System;<br>
-
 namespace ex5<br><br>
 {<br>
     class Box<br>
