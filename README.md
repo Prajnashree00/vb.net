@@ -22,12 +22,10 @@ namespace ex1<br>
                     Console.Write(digit + " ");<br>
                     digit = (digit == 1) ? 0 : 1;<br>
                 }<br>
-                Console.Write("\n");<br>
-
-            }
-        }
-
-    }
+                    Console.Write("\n");<br>
+            }<br>
+        }<br>
+    }<br>
 }<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/154621989-89ff8d1e-9761-4c52-bd61-e3805011b181.png)
