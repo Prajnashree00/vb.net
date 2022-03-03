@@ -1114,7 +1114,6 @@ public class PrintExample<br>
 **Output**
 ![image](https://user-images.githubusercontent.com/97970956/156509743-e582aff4-aa52-4398-97e9-d744ae8a3172.png)
 
-
-
+**27.write a program to a fibonaci traiangle**
 
 
