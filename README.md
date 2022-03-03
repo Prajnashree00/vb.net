@@ -287,7 +287,7 @@ namespace student<br>
   
  ![image](https://user-images.githubusercontent.com/97970956/154626838-d13cba68-9258-485a-91bd-30594d577644.png)
 
-**4.C# Program to Create a Gray Code**<br><br>
+**4.C# Program to Create a Gray Code**<br>
 using System;<br>
 namespace ex3<br>
 {<br>
