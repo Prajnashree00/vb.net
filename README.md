@@ -1115,5 +1115,30 @@ public class PrintExample<br>
 ![image](https://user-images.githubusercontent.com/97970956/156509743-e582aff4-aa52-4398-97e9-d744ae8a3172.png)
 
 **27.write a program to a fibonaci traiangle**
+using System;<br>
+public class PrintExample<br>
+{<br>
+    public static void Main(String[] args)<br>
+    {<br>
+        int a = 0, b = 1, i, c, n, j;<br>
+        Console.Write("Enter the limit");<br>
+        n = int.Parse(Console.ReadLine());<br><br>
+        for (i = 1; i <= n; i++)<br>
+        {<br>
+            a = 0;<br>
+            b = 1;<br>
+            Console.Write(b + "\t");<br>
+            for (j = 1; j < i; j++)<br>
+            {<br>
+                c = a + b;<br>
+                Console.Write(c + "\t");<br>
+                a = b;<br>
+                b = c;<br>
+            }<br>
+            Console.Write("\n");<br>
+        }<br>
+    }<br>
+}<br>
+![image](https://user-images.githubusercontent.com/97970956/156514236-cfda944e-fd4c-4f5b-b419-6ebac979f0b6.png)
 
 
