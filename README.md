@@ -31,7 +31,7 @@ namespace ex1<br>
 ![image](https://user-images.githubusercontent.com/97970956/154621989-89ff8d1e-9761-4c52-bd61-e3805011b181.png)
 
 
-**2.c# program to chech whether the entered number is amicable or not**
+**2.c# program to chech whether the entered number is amicable or not**<br>
 using System;
 
 namespace ex2<br>
@@ -72,7 +72,7 @@ namespace ex2<br>
 }<br>
 ![image](https://user-images.githubusercontent.com/97970956/154622803-b55bb416-9476-4980-abd9-a66457a69091.png)
 
-3.. **C# Program to Illustrate Multilevel Inheritance with Virtual Methods  (displaying student details). **
+3.. **C# Program to Illustrate Multilevel Inheritance with Virtual Methods  (displaying student details). **<br>
 using System;<br>
 
 namespace studentusing System;
@@ -287,7 +287,7 @@ namespace student<br>
   
  ![image](https://user-images.githubusercontent.com/97970956/154626838-d13cba68-9258-485a-91bd-30594d577644.png)
 
-**4.C# Program to Create a Gray Code**
+**4.C# Program to Create a Gray Code**<br><br>
 using System;<br>
 namespace ex3<br>
 {<br>
@@ -314,7 +314,7 @@ namespace ex3<br>
 
 
 **5. C# program to calculate volume of 2 boxes and find the resultant volume  after addition of 2 boxes by implementing operator overloading. 
-**
+**<br>
 using System;<br>
 namespace ex5<br><br>
 {<br>
@@ -356,8 +356,8 @@ namespace ex5<br><br>
 
 ![image](https://user-images.githubusercontent.com/97970956/154628073-261beb47-899e-4c98-b6b2-160d33bcc12c.png)
 
-**6.. C# Program to Implement Principles of Delegates (converting input string to  uppercase first, last and entire string). **
-using System;
+**6.. C# Program to Implement Principles of Delegates (converting input string to  uppercase first, last and entire string). **<br>
+using System;<br>
 namespace upppercase<br>
 {<br>
     class delegates<br>
@@ -395,7 +395,7 @@ namespace upppercase<br>
 }<br>
 ![image](https://user-images.githubusercontent.com/97970956/154628942-8b16e0de-0521-43f4-9cc4-ea30e324bf9f.png)
 
-**7. C# Program to Generate Register Number automatically for 100 Students  using Static Constructor.**
+**7. C# Program to Generate Register Number automatically for 100 Students  using Static Constructor.**<br>
 using System;
 namespace Register<br>
 {<br>
@@ -425,8 +425,8 @@ namespace Register<br>
 ![image](https://user-images.githubusercontent.com/97970956/154631352-e4fe7f0e-2029-4d5b-bd36-cf72c0fa4493.png)
 ![image](https://user-images.githubusercontent.com/97970956/154631406-49a9a180-7faf-42b5-8fdf-669439d9b8fa.png)
 
-**8.C# Program to Find the Frequency of the Word ʺisʺ in a given Sentence. **
-using System;
+**8.C# Program to Find the Frequency of the Word ʺisʺ in a given Sentence. **<br>
+using System;<br>
 namespace freequency<br>
 {<br>
     class freequencyIS<br>
@@ -455,8 +455,8 @@ namespace freequency<br>
 ![image](https://user-images.githubusercontent.com/97970956/154631143-13e10557-c570-4c14-ac47-77fd99cc20d1.png)
 
 
-**9.C# program that benchmarks 2D, jagged array allocation. **
-using System;
+**9.C# program that benchmarks 2D, jagged array allocation. **<br>
+using System;<br>
 using System.Diagnostics;<br>
 namespace benchmarks<br>
 {<br>
@@ -504,8 +504,8 @@ namespace benchmarks<br>
 }<br>
 ![image](https://user-images.githubusercontent.com/97970956/154632699-40ee54cf-6183-4f4e-ba8c-e1bd07e5270b.png)
 
-**10.C# Program to Find the Sum of the Values on Diagonal of the Matrix. using System; **
-using System;
+**10.C# Program to Find the Sum of the Values on Diagonal of the Matrix. using System; **<br>
+using System;<br>
 namespace ex10
 {
     class SumOfDiagonals<br>
@@ -552,7 +552,7 @@ namespace ex10
 ![image](https://user-images.githubusercontent.com/97970956/154633626-af924c82-b262-4da9-877b-cca2aafb7735.png)
 
 
-**11.C# Program to Create a File, Check the Existence of a File and Read the  Contents of the File.**
+**11.C# Program to Create a File, Check the Existence of a File and Read the  Contents of the File.**<br>
 using System;<br>
 using System.IO;<br>
 namespace create<br>
@@ -632,7 +632,7 @@ namespace create<br>
 ![image](https://user-images.githubusercontent.com/97970956/154636121-1a69130c-22cc-43e0-82ff-2c7796243feb.png)
 ![image](https://user-images.githubusercontent.com/97970956/154636191-7d1e85da-545d-4e15-8ec1-6ff37b7e567b.png)
 
-**12.C# Program to Perform File Comparison**
+**12.C# Program to Perform File Comparison**<br>
 using System;<br>
 using System.IO;<br>
 namespace comparision<br>
@@ -672,7 +672,7 @@ namespace comparision<br>
 ![image](https://user-images.githubusercontent.com/97970956/154637496-766975d2-2ba8-4197-a47d-e95e3be54b70.png)
 ![image](https://user-images.githubusercontent.com/97970956/154637547-5d1deafb-ed4c-48ff-b158-9543d0f275c5.png)
 
-**13.. C# Program to Implement IComparable Interface
+**13.. C# Program to Implement IComparable Interface<br>
 using System;<br>
 namespace ex13<br>
 {<br>
@@ -731,7 +731,8 @@ namespace ex13<br>
     }<br>
 }<br>
 ![image](https://user-images.githubusercontent.com/97970956/154637892-c2511ee7-20b1-455d-ba6d-4ed7a2b10cf4.png)
-**14.create a thred pool**
+
+**14.create a thred pool**<br>
 using System;<br>
 using System.Threading;<br>
 namespace Pool<br>
@@ -769,7 +770,7 @@ namespace Pool<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/155658420-0b045807-fe6f-4384-84db-89f0f06e4c62.png)
 
-**15.c# program to demostrate error handling using try catch and finally block**
+**15.c# program to demostrate error handling using try catch and finally block**<br>
 using System;<br>
 namespace ex15<br>
 {<br>
@@ -817,7 +818,7 @@ public class Age<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/155658714-f3552135-c0e6-48ec-a3c6-e694340ee510.png)
 
-**16.c# program to generate the fibanaci series**
+**16.c# program to generate the fibanaci series**<br>
 using System;<br>
 public class FibonacciExample<br>
 {<br>
@@ -839,7 +840,7 @@ public class FibonacciExample<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/155659389-165cc0a5-c16f-4f11-ac9f-6974cd65985d.png)
 
-**17.c# program to check the prime number is or not**
+**17.c# program to check the prime number is or not**<br>
 using System;<br>
 public class PrimeNumberExample<br>
 {<br>
@@ -864,8 +865,8 @@ public class PrimeNumberExample<br>
 }<br>
 ![image](https://user-images.githubusercontent.com/97970956/155659646-20e8dbcb-58f7-4545-8c1d-a05324309071.png)
 
-**18.c# program to check whether palindrome or not**
-using System;
+**18.c# program to check whether palindrome or not**<br>
+using System;<br>
 public class PalindromeExample<br>
 {<br>
     public static void Main(string[] args)<br>
@@ -889,7 +890,7 @@ public class PalindromeExample<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/155661216-9090ce36-7519-42a5-acbe-cfeb02960950.png)
 
-**19.write thye c# program to find the factorial of the number**
+**19.write thye c# program to find the factorial of the number**<br>
 using System;<br>
 public class FactorialExample<br>
 {<br>
@@ -965,7 +966,7 @@ using System;  <br>
 ![image](https://user-images.githubusercontent.com/97970956/155664725-9cea9143-7f34-43e3-af24-77d1664b33e7.png)
 
 **Exapmle**
-**23.write a c# program to print the number triangle**
+**23.write a c# program to print the number triangle**<br>
 using System;<br>
 
 namespace eg31<br>
@@ -1001,7 +1002,7 @@ namespace eg31<br>
 ![image](https://user-images.githubusercontent.com/97970956/156508841-3bb08fcb-12a2-4112-a1f9-121a2ae834ce.png)
 
 
-**24.write a program to find decimal to binary **
+**24.write a program to find decimal to binary **<br>
 using System;<br>
 public class ConversionExample<br>
 {<br>
@@ -1088,7 +1089,7 @@ public class ConversionExample<br>
 **output**
 ![image](https://user-images.githubusercontent.com/97970956/156509435-038f821e-f6c7-46e1-8d90-0a8a28db6204.png)
 
-**26.Write a c# program to alphabet Triangle**
+**26.Write a c# program to alphabet Triangle**<br>
 using System;<br>
 public class PrintExample<br>
 {<br>
@@ -1114,7 +1115,7 @@ public class PrintExample<br>
 **Output**
 ![image](https://user-images.githubusercontent.com/97970956/156509743-e582aff4-aa52-4398-97e9-d744ae8a3172.png)
 
-**27.write a program to a fibonaci traiangle**
+**27.write a program to a fibonaci traiangle**<br>
 using System;<br>
 public class PrintExample<br>
 {<br>
