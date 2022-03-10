@@ -29,11 +29,8 @@ namespace ex1<br>
 }<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/154621989-89ff8d1e-9761-4c52-bd61-e3805011b181.png)
-
-
 **2.c# program to chech whether the entered number is amicable or not**<br>
 using System;
-
 namespace ex2<br>
 {
     class Program<br>
