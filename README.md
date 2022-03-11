@@ -1165,123 +1165,122 @@ namespace ex2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lbl_words.Text = NumtoWord(long.Parse(txt_num.Text));
+            lbl_words.Text = NumtoWord(long.Parse(txt_num.Text));<br>
         }
-        public string NumtoWord(long number)
-        {
+        public string NumtoWord(long number)<br>
+        {<br>
             string word = "";
             if (number == 0)
-            {
-                return "Zero";
-            }
-            if (number < 0)
-            {
-                return "Minus" + Math.Abs(number);
-            }
-            if (number / 10000000 > 0)
-            {
-                word += NumtoWord(number / 10000000) + "Corer"; number %= 10000000;
-            }
+            {<br>
+                return "Zero";<br>
+            }<br>
+            if (number < 0)<br>
+            {<br>
+                return "Minus" + Math.Abs(number);<br>
+            }<br>
+            if (number / 10000000 > 0)<br>
+            {<br>
+                word += NumtoWord(number / 10000000) + "Corer"; number %= 10000000;<br>
+            }<br>
 
-        if (number / 100000 > 0)
-            {
-                word += NumtoWord(number / 100000) + "Lacs";
-                number %= 100000;
-            }
-            if (number / 1000 > 0)
-            {
-                word += NumtoWord(number / 1000) + "Thousand";
-                number %= 1000;
-            }
-            if (number / 100 > 0)
-            {
-                word += NumtoWord(number / 100) + "Hundred";
-                number %= 100;
-            }
-            if (number > 0)
-            {
-                string[] units = new string[] { "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine","ten" ,"Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
-                string[] Tens = new string[] { "Zero", "Ten", "Twenty", "Thirty", "Fourty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
-                if (number < 20)
-                {
-                    word += units[number];
-                }
-                else
-                {
-                    word += Tens[number / 10];
-                    if (number % 10 > 0)
-                    {
-                        word += units[number % 10];
-                    }
-                }
-            }
+        if (number / 100000 > 0)<br>
+            {<br>
+                word += NumtoWord(number / 100000) + "Lacs";<br>
+                number %= 100000;<br>
+            }<br>
+            if (number / 1000 > 0)<br>
+            {<br>
+                word += NumtoWord(number / 1000) + "Thousand";<br>
+                number %= 1000;<br>
+            }<br>
+            if (number / 100 > 0)<br>
+            {<br>
+                word += NumtoWord(number / 100) + "Hundred";<br>
+                number %= 100;<br>
+            }<br>
+            if (number > 0)<br>
+            {<br>
+                string[] units = new string[] { "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine","ten" ,"Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };<br>
+                string[] Tens = new string[] { "Zero", "Ten", "Twenty", "Thirty", "Fourty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };<br>
+                if (number < 20)<br>
+                {<br>
+                    word += units[number];<br>
+                }<br>
+                else<br>
+                {<br>
+                    word += Tens[number / 10];<br>
+                    if (number % 10 > 0)<br>
+                    {<br>
+                        word += units[number % 10];<br>
+                    }<br>
+                }<br>
+            }<br>
             return word;
-        }
-    }
-}
+        }<br>
+    }<br>
+}<br>
 
             
 
 OUTPUT:
 
 
-![image](https://user-images.githubusercontent.com/97940767/157811354-31ba1c0e-df5d-4955-9027-d3f228c69fa9.png)
+![image](https://user-images.githubusercontent.com/97940767/157811354-31ba1c0e-df5d-4955-9027-d3f228c69fa9.png)<br>
 ![image](https://user-images.githubusercontent.com/97940767/157811446-b77dd21d-7724-4ed1-a02b-2f06beef44c1.png)
 
 
-**3.. C# Program to Perform Reversal, Padding and Trimming Operations on  string. **
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+**3.. C# Program to Perform Reversal, Padding and Trimming Operations on  string. **<br>
+using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using System.Windows.Forms;<br>
 
-namespace lab4
-{
-    public partial class Form1 : Form
+namespace lab4<br>
+{<br>
+    public partial class Form1 : Form<br>
     {
-        public Form1()
-        {
-            InitializeComponent();
-        }
+        public Form1()<br>
+        {<br>
+            InitializeComponent();<br>
+        }<br>
+        private void button1_Click(object sender, EventArgs e)<br>
+        {<br>
+            string inputString, revstr = "";<br>
+            int Length;<br>
+            inputString = txtInput.Text;<br>
+            Length = inputString.Length - 1;<br>
+            while (Length >= 0)<br>
+            {<br>
+                revstr = revstr + inputString[Length];<br>
+                Length--;<br>
+            }<br>
+            MessageBox.Show("Reverse String Is : " + revstr, "Result");<br>
+        }<br>
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void button2_Click(object sender, EventArgs e)<br>
+        {<br>
+            string inputString;<br>
+            inputString = txtInput.Text;<br>
+            MessageBox.Show("The String After Trimming : " + inputString.Trim(), "Result");<br>
+        }<br>
 
-            string inputString, revstr = "";
-            int Length;
-            inputString = txtInput.Text;
-            Length = inputString.Length - 1;
-            while (Length >= 0)
-            {
-                revstr = revstr + inputString[Length];
-                Length--;
-            }
-            MessageBox.Show("Reverse String Is : " + revstr, "Result");
-        }
+        private void button3_Click(object sender, EventArgs e)<br>
+        {<br>
+            string inputString;<br>
+            inputString = txtInput.Text;<br>
+            inputString = inputString.PadLeft(10, '*');<br>
+            inputString = inputString.PadRight(15, '*');<br>
+            MessageBox.Show("String After Padding : " + inputString, "Result");<br>
+        }<br>
+    }<br>
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string inputString;
-            inputString = txtInput.Text;
-            MessageBox.Show("The String After Trimming : " + inputString.Trim(), "Result");
-        }
+}<br>
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            string inputString;
-            inputString = txtInput.Text;
-            inputString = inputString.PadLeft(10, '*');
-            inputString = inputString.PadRight(15, '*');
-            MessageBox.Show("String After Padding : " + inputString, "Result");
-        }
-    }
-
-}
 
 ![image](https://user-images.githubusercontent.com/97970956/157820065-79e67d7d-46c8-461a-a607-7fdd031f5550.png)
 ![image](https://user-images.githubusercontent.com/97970956/157820232-0b687e42-9e6c-496c-853a-bc38c3eb344c.png)
