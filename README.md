@@ -1229,8 +1229,66 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/97940767/157811446-b77dd21d-7724-4ed1-a02b-2f06beef44c1.png)
 
 
+**3.. C# Program to Perform Reversal, Padding and Trimming Operations on  string. **
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
+namespace lab4
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            string inputString, revstr = "";
+            int Length;
+            inputString = txtInput.Text;
+            Length = inputString.Length - 1;
+            while (Length >= 0)
+            {
+                revstr = revstr + inputString[Length];
+                Length--;
+            }
+            MessageBox.Show("Reverse String Is : " + revstr, "Result");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string inputString;
+            inputString = txtInput.Text;
+            MessageBox.Show("The String After Trimming : " + inputString.Trim(), "Result");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string inputString;
+            inputString = txtInput.Text;
+            inputString = inputString.PadLeft(10, '*');
+            inputString = inputString.PadRight(15, '*');
+            MessageBox.Show("String After Padding : " + inputString, "Result");
+        }
+    }
+
+}
+
+![image](https://user-images.githubusercontent.com/97970956/157820065-79e67d7d-46c8-461a-a607-7fdd031f5550.png)
+![image](https://user-images.githubusercontent.com/97970956/157820232-0b687e42-9e6c-496c-853a-bc38c3eb344c.png)
+![image](https://user-images.githubusercontent.com/97970956/157820318-dfcd95ad-00c0-4d1d-8ded-10c3ac9028f6.png)
+![image](https://user-images.githubusercontent.com/97970956/157820384-0620f8ab-7e11-4bd8-9c44-da7a8ec3b629.png)
+
+    
 
 
 
