@@ -1321,7 +1321,45 @@ private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/158744269-2ad9d518-8913-4469-adcf-46718cfcebed.png)
 
+**27.Develop a winform application to create flat clock.**<br>
+using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using System.Windows.Forms;<br>
+namespace lab6<br>
+{<br>
+    public partial class Form1 : Form<br>
+    {<br>
+        public Form1()<br>
+        {<br>
+            InitializeComponent();<br>
+            timer1.Start();<br>
+        }<br>
+<br>
+        private void Form1_Load(object sender, EventArgs e)<br>
+        {<br>
+            System.Timers.Timer timer = new System.Timers.Timer();<br>
+            timer.Interval = 1000;<br>
+            timer.Elapsed += Timer_Elapsed;<br>
+            timer.Start();<br>
+        }<br>
+        private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)<br>
+        {<br>
+            circularProgressBar1.Invoke((MethodInvoker)delegate<br>
+            {<br>
+                circularProgressBar1.Text = DateTime.Now.ToString("hh:mm:ss"); circularProgressBar1.SubscriptText = DateTime.Now.ToString("tt");//AM or PM  }); <br>
+            });<br>
+        }<br>
+    }<br>
+}<br>
 
+![image](https://user-images.githubusercontent.com/97970956/158755816-99f96cc5-2ea7-4637-ae81-f14e532c7351.png)
+![image](https://user-images.githubusercontent.com/97970956/158755895-177a86d3-d664-4be4-8df4-32ffb939e1e7.png)
 
 
 
