@@ -1248,7 +1248,7 @@ namespace lab4<br>
         {<br>
             InitializeComponent();<br>
         }<br>
-        private void button1_Click(object sender, EventArgs e)<br>
+private void button1_Click(object sender, EventArgs e)<br>
         {<br>
             string inputString, revstr = "";<br>
             int Length;<br>
@@ -1261,15 +1261,14 @@ namespace lab4<br>
             }<br>
             MessageBox.Show("Reverse String Is : " + revstr, "Result");<br>
         }<br>
-
-        private void button2_Click(object sender, EventArgs e)<br>
+private void button2_Click(object sender, EventArgs e)<br>
         {<br>
             string inputString;<br>
             inputString = txtInput.Text;<br>
             MessageBox.Show("The String After Trimming : " + inputString.Trim(), "Result");<br>
         }<br>
 
-        private void button3_Click(object sender, EventArgs e)<br>
+private void button3_Click(object sender, EventArgs e)<br>
         {<br>
             string inputString;<br>
             inputString = txtInput.Text;<br>
@@ -1278,7 +1277,6 @@ namespace lab4<br>
             MessageBox.Show("String After Padding : " + inputString, "Result");<br>
         }<br>
     }<br>
-
 }<br>
 
 
@@ -1288,55 +1286,44 @@ namespace lab4<br>
 ![image](https://user-images.githubusercontent.com/97970956/157820384-0620f8ab-7e11-4bd8-9c44-da7a8ec3b629.png)
 
 **26.c#program to create a progress bar control**
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Windows.Forms;
-
-namespace lab5
-{
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            backgroundWorker1.WorkerReportsProgress = true;
-            backgroundWorker1.RunWorkerAsync();
-
-        }
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-            for(int i=1 ; i<=100;i++)
-            {
-                Thread.Sleep(50);
-                backgroundWorker1.ReportProgress(i);
-
-            }
-
-        }
-
-        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            progressBar1.Value = e.ProgressPercentage;
-            this.Text = "progress:" +
-                e.ProgressPercentage.ToString() + "%";
-
-        }
-
-       
-    }
-}
-
+using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading;<br>
+using System.Windows.Forms;<br>
+namespace lab5<br>
+{<br>
+    public partial class Form1 : Form<br>
+    {<br>
+        public Form1()<br>
+        {<br>
+            InitializeComponent();<br><br>
+        }<br>
+private void Form1_Load(object sender, EventArgs e)<br>
+        {<br>
+            backgroundWorker1.WorkerReportsProgress = true;<br>
+            backgroundWorker1.RunWorkerAsync();<br>
+        }<br>
+private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)<br>
+        {<br>
+            for(int i=1 ; i<=100;i++)<br>
+            {<br>
+                Thread.Sleep(50);<br>
+                backgroundWorker1.ReportProgress(i);<br>
+            }<br>
+        }<br>
+  private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)<br>
+        {<br>
+            progressBar1.Value = e.ProgressPercentage;<br>
+            this.Text = "progress:" +<br>
+                e.ProgressPercentage.ToString() + "%";<br>
+        }<br>
+    }<br>
+}<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/158744269-2ad9d518-8913-4469-adcf-46718cfcebed.png)
 
