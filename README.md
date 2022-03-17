@@ -1287,8 +1287,58 @@ namespace lab4<br>
 ![image](https://user-images.githubusercontent.com/97970956/157820318-dfcd95ad-00c0-4d1d-8ded-10c3ac9028f6.png)
 ![image](https://user-images.githubusercontent.com/97970956/157820384-0620f8ab-7e11-4bd8-9c44-da7a8ec3b629.png)
 
-    
+**26.c#program to create a progress bar control**
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
 
+namespace lab5
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.RunWorkerAsync();
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            for(int i=1 ; i<=100;i++)
+            {
+                Thread.Sleep(50);
+                backgroundWorker1.ReportProgress(i);
+
+            }
+
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Value = e.ProgressPercentage;
+            this.Text = "progress:" +
+                e.ProgressPercentage.ToString() + "%";
+
+        }
+
+       
+    }
+}
+
+
+![image](https://user-images.githubusercontent.com/97970956/158744269-2ad9d518-8913-4469-adcf-46718cfcebed.png)
 
 
 
