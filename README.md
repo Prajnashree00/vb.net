@@ -1140,30 +1140,27 @@ public class PrintExample<br>
 ![image](https://user-images.githubusercontent.com/97970956/156514236-cfda944e-fd4c-4f5b-b419-6ebac979f0b6.png)
 
 
-WINDOWS APPLICATION
+**WINDOWS APPLICATION<br>
+1. CONVERT DIGITS INTO WORD**<br>
+using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using System.Windows.Forms;<br>
+namespace ex2<br>
+{<br>
+    public partial class Form1 : Form<br>
+    {<br>
+        public Form1()<br>
+        {<br>
+            InitializeComponent();<br>
+        }<br>
 
-1. CONVERT DIGITS INTO WEORDS
-
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace ex2
-{
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)<br>
         {
             lbl_words.Text = NumtoWord(long.Parse(txt_num.Text));<br>
         }
