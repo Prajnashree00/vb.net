@@ -1228,8 +1228,7 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/97940767/157811354-31ba1c0e-df5d-4955-9027-d3f228c69fa9.png)<br>
 ![image](https://user-images.githubusercontent.com/97940767/157811446-b77dd21d-7724-4ed1-a02b-2f06beef44c1.png)
 
-
-**3.. C# Program to Perform Reversal, Padding and Trimming Operations on  string. **<br>
+**3.. C# Program to Perform Reversal, Padding and Trimming Operations on  string.**<br>
 using System;<br>
 using System.Collections.Generic;<br>
 using System.ComponentModel;<br>
@@ -1239,7 +1238,6 @@ using System.Linq;<br>
 using System.Text;<br>
 using System.Threading.Tasks;<br>
 using System.Windows.Forms;<br>
-
 namespace lab4<br>
 {<br>
     public partial class Form1 : Form<br>
@@ -1267,7 +1265,6 @@ private void button2_Click(object sender, EventArgs e)<br>
             inputString = txtInput.Text;<br>
             MessageBox.Show("The String After Trimming : " + inputString.Trim(), "Result");<br>
         }<br>
-
 private void button3_Click(object sender, EventArgs e)<br>
         {<br>
             string inputString;<br>
