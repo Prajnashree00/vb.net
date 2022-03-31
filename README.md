@@ -1362,31 +1362,31 @@ namespace lab6<br>
 ![image](https://user-images.githubusercontent.com/97970956/158755895-177a86d3-d664-4be4-8df4-32ffb939e1e7.png)
 
 
-**28 C# program perform a number guessing game**
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+**28 C# program perform a number guessing game**<br>
+using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using System.Windows.Forms;<br>
 
-namespace lab9
-{
-    public partial class Form1 : Form
-    {// Intialising component  
-        static Random r = new Random();
-        int value;
-        int guessnum;
-        int win = 10;
-        int guess = 1;
-        Button button1;
-        TextBox textBox1;
-        RichTextBox richTextBox1;
-        RichTextBox richTextBox2;
-        Label label4;
+namespace lab9<br>
+{<br>
+    public partial class Form1 : Form<br>
+    {// Intialising component  <br>
+        static Random r = new Random();<br>
+        int value;<br>
+        int guessnum;<br>
+        int win = 10;<br>
+        int guess = 1;<br>
+        Button button1;<br>
+        TextBox textBox1;<br>
+        RichTextBox richTextBox1;<br>
+        RichTextBox richTextBox2;<br>
+        Label label4;<br>
 
         public Form1()
         {
