@@ -1487,7 +1487,6 @@ using System.Linq;<br>
 using System.Text;<br>
 using System.Threading.Tasks;<br>
 using System.Windows.Forms;<br>
-
 namespace lab21<br>
 {<br>
     public partial class Form1 : Form<br>
@@ -1530,15 +1529,12 @@ namespace lab21<br>
             txtContent.Font = new Font("Arial", 16);<br>
             txtContent.AcceptsTab = true;<br>
             txtContent.Padding = new Padding(8);<br>
-
-        this.Controls.Add(toolBar);<br>
+            this.Controls.Add(toolBar);<br>
             this.Controls.Add(txtContent);<br>
         }<br>
         private void toolBarClicked(Object sender, ToolBarButtonClickEventArgs e)<br>
         {<br>
             saveFile();<br>
-           
-          
             switch (toolBar.Buttons.IndexOf(e.Button))<br>
             {<br>
                 case 0:<br>
