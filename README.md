@@ -1586,49 +1586,49 @@ namespace lab21<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/160995813-173a2a45-f8f9-4398-a0b0-b6749e2a57ae.png)
 
-**30.23. C# Program to Perform Reversal, Padding and Trimming Operations on  string. **
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing.Drawing2D;
+**30.23. C# Program to Perform Reversal, Padding and Trimming Operations on  string. **<br>
+using System;<br><br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using System.Windows.Forms;<br>
+using System.Drawing.Drawing2D;<br><br>
 
 
-namespace lab23
-{
-    public partial class Form1 : Form
-    {
-        private Node root;
+namespace lab23<br>
+{<br>
+    public partial class Form1 : Form<br>
+    {<br>
+        private Node root;<br>
         public Form1()
-        {
-            InitializeComponent();
-            this.root = null;
-            test();  
-        }
-        void test()
-        {
-            textBox1.Text = "5";
-            btnAdd_Click(btnAdd, null);
-            textBox1.Text = "3";
-            btnAdd_Click(btnAdd, null);
-            textBox1.Text = "2";
-            btnAdd_Click(btnAdd, null);
-            textBox1.Text = "1";
-            btnAdd_Click(btnAdd, null);
-            textBox1.Text = "4";
-            btnAdd_Click(btnAdd, null);
-            textBox1.Text = "7";
-            btnAdd_Click(btnAdd, null);
-            textBox1.Text = "6";
-            btnAdd_Click(btnAdd, null);
-            textBox1.Text = "8";
-            btnAdd_Click(btnAdd, null);
-        }
+        {<br>
+            InitializeComponent();<br>
+            this.root = null;<br>
+            test();  <br>
+        }<br>
+        void test()<br>
+        {<br>
+            textBox1.Text = "5";<br>
+            btnAdd_Click(btnAdd, null);<br>
+            textBox1.Text = "3";<br>
+            btnAdd_Click(btnAdd, null);<br>
+            textBox1.Text = "2";<br>
+            btnAdd_Click(btnAdd, null);<br>
+            textBox1.Text = "1";<br>
+            btnAdd_Click(btnAdd, null);<br>
+            textBox1.Text = "4";<br>
+            btnAdd_Click(btnAdd, null);<br>
+            textBox1.Text = "7";<br>
+            btnAdd_Click(btnAdd, null);<br><br>
+            textBox1.Text = "6";<br>
+            btnAdd_Click(btnAdd, null);<br>
+            textBox1.Text = "8";<br>
+            btnAdd_Click(btnAdd, null);<br>
+        }<br>
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -1854,12 +1854,11 @@ namespace lab23
                  new PointF(x1 + w/6, y1 + h/3.5f),
                 new PointF(x2 - w/6, y2 - h/3.5f),
                     new PointF(x2, y2)
- };
-
+             };
             g.DrawCurve(pen, points.ToArray(), 0.5f);
             }
             return result;
-        }
+              }
         public bool Exists(int value)
         {
             bool res = value == this.value;
