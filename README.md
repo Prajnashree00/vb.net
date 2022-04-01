@@ -1841,7 +1841,7 @@ namespace lab23
                  new PointF(x1 - w/6, y1 + h/3.5f),
                  new PointF(x2 + w/6, y2 - h/3.5f),
                  new PointF(x2, y2),
- };
+            };
                 g.DrawCurve(pen, points1.ToArray(), 0.5f);
             }
             if (rNodeImg != null)
