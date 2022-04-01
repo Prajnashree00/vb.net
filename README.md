@@ -1837,6 +1837,14 @@ namespace lab23<br>
     }<br>
 } <br>
 
+    ![image](https://user-images.githubusercontent.com/97970956/161214090-dc12daad-721e-4d12-a4bb-d99363184d81.png)
+    ![image](https://user-images.githubusercontent.com/97970956/161214167-04d131f2-3e74-4c42-93ac-0efa81f07090.png)
+![image](https://user-images.githubusercontent.com/97970956/161214229-bef1c99e-0966-47bb-af9c-c9bfaf928472.png)
+![image](https://user-images.githubusercontent.com/97970956/161214286-86e40af6-e025-4cad-b876-76f15e0bf164.png)
+![image](https://user-images.githubusercontent.com/97970956/161214344-e8200306-8ec5-4d0f-820c-d1fcf74ca032.png)
+![image](https://user-images.githubusercontent.com/97970956/161214461-f03b60ea-290c-4c8e-8e8a-a4a233a05f89.png)
+
+
     
 
 
