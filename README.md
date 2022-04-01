@@ -1794,31 +1794,31 @@ namespace lab23<br>
             }
             return false;
         }
-        public Image Draw()
-        {
-            Size lSize = new Size(nodeBg.Width / 2, 0);
-            Size rSize = new Size(nodeBg.Width / 2, 0);
-            Image lNodeImg = null;
-            Image rNodeImg = null;
-            int lCenter = 0, rCenter = 0;
+        public Image Draw()<br><br>
+        {<br>
+            Size lSize = new Size(nodeBg.Width / 2, 0);<br>
+            Size rSize = new Size(nodeBg.Width / 2, 0);<br>
+            Image lNodeImg = null;<br>
+            Image rNodeImg = null;<br>
+            int lCenter = 0, rCenter = 0;<br>
 
-            if (this.left != null)
-            {
-                lNodeImg = left.Draw();
-                lSize = lNodeImg.Size;
-                this.center = lSize.Width;
-                lCenter = left.center;
-            }
-            if (this.right != null)
-            {
-                rNodeImg = right.Draw();
-                rSize = rNodeImg.Size;
-                rCenter = right.center;
-            }
-            int maxHeight = (lSize.Height < rSize.Height) ? rSize.Height : lSize.Height; 
-            if (maxHeight > 0) maxHeight += 35;
+            if (this.left != null)<br>
+            {<br>
+                lNodeImg = left.Draw();<br>
+                lSize = lNodeImg.Size;<br>
+                this.center = lSize.Width;<br>
+                lCenter = left.center;<br>
+            }<br>
+            if (this.right != null)<br>
+            {<br>
+                rNodeImg = right.Draw();<br>
+                rSize = rNodeImg.Size;<br>
+                rCenter = right.center;<br>
+            }<br>
+            int maxHeight = (lSize.Height < rSize.Height) ? rSize.Height : lSize.Height; <br>
+            if (maxHeight > 0) maxHeight += 35;<br>
 
-        Size resultSize = new Size(lSize.Width + rSize.Width, nodeBg.Size.Height + maxHeight);
+        Size resultSize = new Size(lSize.Width + rSize.Width, nodeBg.Size.Height + maxHeight);<br>
             Bitmap result = new Bitmap(resultSize.Width, resultSize.Height);
             Graphics g = Graphics.FromImage(result);
             g.SmoothingMode = SmoothingMode.HighQuality;
