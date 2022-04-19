@@ -1844,9 +1844,30 @@ namespace lab23<br>
 ![image](https://user-images.githubusercontent.com/97970956/161214344-e8200306-8ec5-4d0f-820c-d1fcf74ca032.png)
 ![image](https://user-images.githubusercontent.com/97970956/161214461-f03b60ea-290c-4c8e-8e8a-a4a233a05f89.png)
 
+**armstrong number or not**
+  using System;  
+  public class ArmstrongExample  
+   {  
+     public static void Main(string[] args)  
+      {  
+       int  n,r,sum=0,temp;      
+       Console.Write("Enter the Number= ");      
+       n= int.Parse(Console.ReadLine());     
+       temp=n;      
+       while(n>0)      
+       {      
+        r=n%10;      
+        sum=sum+(r*r*r);      
+        n=n/10;      
+       }      
+       if(temp==sum)      
+        Console.Write("Armstrong Number.");      
+       else      
+        Console.Write("Not Armstrong Number.");      
+      }  
+  }   
 
-    
-
+![image](https://user-images.githubusercontent.com/97970956/163926300-0a2c4ed9-3e33-4331-a870-c346772d9a5b.png)
 
 
 
