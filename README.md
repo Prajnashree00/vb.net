@@ -1870,6 +1870,78 @@ namespace lab23<br>
 ![image](https://user-images.githubusercontent.com/97970956/163926300-0a2c4ed9-3e33-4331-a870-c346772d9a5b.png)
 
 
+**Write a program to perform money conversion.**
+    ![image](https://user-images.githubusercontent.com/97970956/165695711-3cfeb9c5-5ae8-4333-b437-7663d2a45805.png)
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace money
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label4.Visible = true;
+            if (textBox1.Text == "")
+            {
+                label4.Text = "Enter the amount";
+            }
+            else
+            {
+                Double convertedamt = Convert.ToDouble(textBox1.Text);
+                if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "USD")
+                {
+                    Double a = convertedamt / 74;
+                    label4.Text = a + "$";
+                }
+                else if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "SAR")
+                {
+                    Double a = convertedamt / 17;
+                    label4.Text = a + "SAR";
+                }
+                else if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "EUR")
+                {
+
+                    Double a = convertedamt / 11;
+                    label4.Text = a + "EUR";
+                }
+                else
+                {
+                    label4.Text = "Please Enter the conversion code";
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            textBox1.Text = "";
+            label4.Text = "";
+
+        }
+    }
+
+}
+    
+![image](https://user-images.githubusercontent.com/97970956/165695866-e680d7ea-0cec-4228-b09f-6602168d5290.png)
+
 
 
 
