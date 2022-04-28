@@ -1870,77 +1870,77 @@ namespace lab23<br>
 ![image](https://user-images.githubusercontent.com/97970956/163926300-0a2c4ed9-3e33-4331-a870-c346772d9a5b.png)
 
 
-**Write a program to perform money conversion.**
-    ![image](https://user-images.githubusercontent.com/97970956/165695711-3cfeb9c5-5ae8-4333-b437-7663d2a45805.png)
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+**Write a program to perform money conversion.**<br>
+    ![image](https://user-images.githubusercontent.com/97970956/165695711-3cfeb9c5-5ae8-4333-b437-7663d2a45805.png)<br>
+using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using System.Windows.Forms;<br>
 
-namespace money
-{
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
-            InitializeComponent();
-        }
+namespace money<br>
+{<br><br>
+    public partial class Form1 : Form<br>
+    {<br>
+        public Form1()<br>
+        {<br>
+            InitializeComponent();<br>
+        }<br>
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        private void Form1_Load(object sender, EventArgs e)<br>
+        {<br>
 
-        }
+        }<br>
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            label4.Visible = true;
-            if (textBox1.Text == "")
-            {
-                label4.Text = "Enter the amount";
-            }
-            else
-            {
-                Double convertedamt = Convert.ToDouble(textBox1.Text);
-                if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "USD")
-                {
-                    Double a = convertedamt / 74;
-                    label4.Text = a + "$";
-                }
-                else if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "SAR")
-                {
-                    Double a = convertedamt / 17;
-                    label4.Text = a + "SAR";
-                }
-                else if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "EUR")
-                {
+        private void button1_Click(object sender, EventArgs e)<br>
+        {<br>
+            label4.Visible = true;<br>
+            if (textBox1.Text == "")<br>
+            {<br>
+                label4.Text = "Enter the amount";<br>
+            }<br>
+            else<br>
+            {<br>
+                Double convertedamt = Convert.ToDouble(textBox1.Text);<br>
+                if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "USD")<br>
+                {<br>
+                    Double a = convertedamt / 74;<br>
+                    label4.Text = a + "$";<br>
+                }<br>
+                else if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "SAR")<br>
+                {<br>
+                    Double a = convertedamt / 17;<br>
+                    label4.Text = a + "SAR";<br>
+                }<br>
+                else if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "EUR")<br>
+                {<br>
 
-                    Double a = convertedamt / 11;
-                    label4.Text = a + "EUR";
-                }
-                else
-                {
-                    label4.Text = "Please Enter the conversion code";
-                }
-            }
-        }
+                    Double a = convertedamt / 11;<br>
+                    label4.Text = a + "EUR";<br>
+                }<br>
+                else<br>
+                {<br>
+                    label4.Text = "Please Enter the conversion code<br>
+                }<br><br>
+            }<br>
+        }<br>
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+        private void button2_Click(object sender, EventArgs e)<br>
+        {<br>
 
-            textBox1.Text = "";
-            label4.Text = "";
+            textBox1.Text = "";<br>
+            label4.Text = "";<br>
 
-        }
-    }
+        }<br>
+    }<br>
 
-}
+}<br>
     
-![image](https://user-images.githubusercontent.com/97970956/165695866-e680d7ea-0cec-4228-b09f-6602168d5290.png)
+![image](https://user-images.githubusercontent.com/97970956/165695866-e680d7ea-0cec-4228-b09f-6602168d5290.png)<br>
 
 
 
